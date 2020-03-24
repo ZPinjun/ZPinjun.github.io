@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-24T06:24:37.533Z</updated>
+  <updated>2020-03-24T09:46:20.618Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2020/03/24/My-first-Blog/"/>
     <id>http://yoursite.com/2020/03/24/My-first-Blog/</id>
     <published>2020-03-24T04:27:23.000Z</published>
-    <updated>2020-03-24T06:24:37.533Z</updated>
+    <updated>2020-03-24T09:46:20.618Z</updated>
     
-    <content type="html"><![CDATA[<p>这是我写的第一篇博客<br>123</p><p>2314</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">4</span>;</span><br><span class="line">a = <span class="number">8</span>;</span><br></pre></td></tr></table></figure><blockquote><p>雄关漫道真如铁，而今迈步从头越</p></blockquote><p><em>斜体</em></p><p><strong>加粗</strong></p><p>$$<br>\left {<br>\begin{array}{c}<br>a_1x+b_1y+c_1z=d_1 \<br>a_2x+b_2y+c_2z=d_2 \<br>a_3x+b_3y+c_3z=d_3<br>\end{array}<br>\right.<br>$$</p><p>$x^4$</p><p>$$x^4$$</p>]]></content>
+    <content type="html"><![CDATA[<p>这是我写的第一篇博客<br>123</p><p>2314</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">4</span>;</span><br><span class="line">a = <span class="number">8</span>;</span><br></pre></td></tr></table></figure><blockquote><p>雄关漫道真如铁，而今迈步从头越</p></blockquote><p><em>斜体</em></p><p><strong>加粗</strong></p><p>$$<br>\left {<br>\begin{array}{c}<br>a_1x+b_1y+c_1z=d_1 \<br>a_2x+b_2y+c_2z=d_2 \<br>a_3x+b_3y+c_3z=d_3<br>\end{array}<br>\right.<br>$$</p><p><img src="/" alt class="lazyload" data-src="/2020/03/24/My-first-Blog/cover.jpg"></p><p>$x^4$</p><p>$$x^4$$</p>]]></content>
     
     <summary type="html">
     
