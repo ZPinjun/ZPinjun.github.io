@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-25T02:57:29.780Z</updated>
+  <updated>2020-03-25T09:46:24.987Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OneNote同步问题的一个解决方案</title>
+    <link href="http://yoursite.com/2020/03/25/20200325-OneNote%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98%E7%9A%84%E4%B8%80%E4%B8%AA%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>http://yoursite.com/2020/03/25/20200325-OneNote%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98%E7%9A%84%E4%B8%80%E4%B8%AA%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
+    <published>2020-03-25T08:23:32.000Z</published>
+    <updated>2020-03-25T09:46:24.987Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近由于疫情的影响，课题组要求用OneNote共享工作记录的形式汇报日常工作。于是打开了尘封已久的OneNote，果然同步出现了问题。最开始是共享笔记本一输入对方Mcrosoft账户OneNote就闪退。后来发现这是因为我的电脑里同时存在OneNote2016和OneNote for Windows 10两个版本，所以产生了冲突，卸掉一个就好。但是同步问题还是没有解决，老师那端看不到笔记内容。本文就记录一下解决办法。</p><h3 id="1-修改hosts"><a href="#1-修改hosts" class="headerlink" title="1. 修改hosts"></a>1. 修改hosts</h3><p>找到C:\Windows\System32\drivers\etc目录下的hosts文件（最好先备份），用记事本打开，在最后加上以下内容：</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">134<span class="selector-class">.170</span><span class="selector-class">.108</span><span class="selector-class">.26</span> <span class="selector-tag">onedrive</span><span class="selector-class">.live</span><span class="selector-class">.com</span></span><br><span class="line">134<span class="selector-class">.170</span><span class="selector-class">.109</span><span class="selector-class">.48</span> <span class="selector-tag">skyapi</span><span class="selector-class">.onedrive</span><span class="selector-class">.live</span><span class="selector-class">.com</span></span><br></pre></td></tr></table></figure><p>修改这个文件需要管理员权限。无法修改的话可以先拷出来，用记事本打开修改，保存，再复制回去替换原有文件。</p><p>hosts是一个没有扩展名的系统文件，可以用记事本等工具打开，其作用就是将一些常用的网址域名与其对应的IP地址建立一个关联“数据库”，当用户在浏览器中输入一个需要登录的网址时，系统会首先自动从Hosts文件中寻找对应的IP地址，一旦找到，系统会立即打开对应网页，如果没有找到，则系统会再将网址提交DNS域名解析服务器进行IP地址的解析。</p><h3 id="2-通过OneDrive打开笔记本"><a href="#2-通过OneDrive打开笔记本" class="headerlink" title="2. 通过OneDrive打开笔记本"></a>2. 通过OneDrive打开笔记本</h3><p>之后不要直接打开笔记本，可以先关闭笔记本，然后从OneDrive打开笔记本，之后右键查看同步状态，等一会儿就可以同步成功了。这个问题可能与OneDrive上的缓存有关。</p><p><img src="/" alt="录屏" class="lazyload" data-src="/2020/03/25/20200325-OneNote%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98%E7%9A%84%E4%B8%80%E4%B8%AA%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/1.gif"></p><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><blockquote><p><a href="http://www.xitongcheng.com/jiaocheng/dnrj_article_25739.html" target="_blank" rel="noopener">http://www.xitongcheng.com/jiaocheng/dnrj_article_25739.html</a><br><a href="https://www.zhihu.com/question/54040348/answer/406291062" target="_blank" rel="noopener">https://www.zhihu.com/question/54040348/answer/406291062</a></p></blockquote><p>另外再推荐一款OneNote网络同步自动检测修复工具FixOne：</p><blockquote><p><a href="http://cn.onenotegem.com/a/addins/fix-one.html" target="_blank" rel="noopener">http://cn.onenotegem.com/a/addins/fix-one.html</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近由于疫情的影响，课题组要求用OneNote共享工作记录的形式汇报日常工作。于是打开了尘封已久的OneNote，果然同步出现了问题。最开始是共享笔记本一输入对方Mcrosoft账户OneNote就闪退。后来发现这是因为我的电脑里同时存在OneNote2016和OneNot
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="技术" scheme="http://yoursite.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>斯坦福高效睡眠法</title>
