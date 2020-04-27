@@ -92,4 +92,30 @@
     
   </entry>
   
+  <entry>
+    <title>第七届哈工大“自动测试与仪器技术”全国研究生暑期学校纪事(威海)</title>
+    <link href="http://yoursite.com/2019/08/01/20200427-%E5%A8%81%E6%B5%B7%E6%9A%91%E6%9C%9F%E5%AD%A6%E6%A0%A1%E7%BA%AA%E5%AE%9E/"/>
+    <id>http://yoursite.com/2019/08/01/20200427-%E5%A8%81%E6%B5%B7%E6%9A%91%E6%9C%9F%E5%AD%A6%E6%A0%A1%E7%BA%AA%E5%AE%9E/</id>
+    <published>2019-08-01T08:23:32.000Z</published>
+    <updated>2020-04-27T06:02:19.780Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="暑期学校简介"><a href="#暑期学校简介" class="headerlink" title="暑期学校简介"></a>暑期学校简介</h1><p>哈工大“自动测试与仪器技术”全国研究生暑期学校是由哈尔滨工业大学本部自动化测试与控制研究所和哈工大威海分校共同承办的面向全国准研究生的暑期训练营。详细信息点 <a href="https://a.eqxiu.com/s/CEA14EuC?eqrcode=1&amp;share_level=5&amp;from_user=202004275378cf24&amp;from_id=8f96cfe4-c&amp;share_time=1587953016799&amp;from=timeline&amp;isappinstalled=0" target="_blank" rel="noopener">这里</a>。</p><p>今年的暑期学校在威海举办，时间是7月14日~7月26日。我在6月25日提交了报名表，在7月4日收到了录取通知。</p><p><img src="/" alt="录取" class="lazyload" data-src="/2019/08/01/20200427-%E5%A8%81%E6%B5%B7%E6%9A%91%E6%9C%9F%E5%AD%A6%E6%A0%A1%E7%BA%AA%E5%AE%9E/1.jpg"></p><h1 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h1><p>来到威海分校，经过开营仪式之后，我们首先是听取了很多场专家讲座。这些分享者来自于各个领域，有些还是工大的校友。他们有的分享了他们的创业故事，有的介绍了领域行情，有的介绍前沿技术。虽然很多内容离我们的专业很远，但确实极大地开阔了我们的眼界。</p><p>之后便是动手实践环节。我们要组成一个3~4人的团队，用一周的时间开发出一个完整的作品。很幸运的是，当时我的好朋友Y同学和P同学都在，这样我们就顺利地组成了一个高效的团队。</p><p>我们选择的作品题目是“基于FPGA+VGA的嵌入式俄罗斯方块小游戏”。我们使用主办方提供的Xilinx 开发板，开发软件使用VIVADO，开发语言使用Verilog。有别于传统的软件编程，我们使用FPGA硬件语言开发游戏逻辑，用开发板上的五个按键作为输入来控制俄罗斯方块的移动和旋转，输出使用VGA总线连接到显示屏上。我们利用VGA协议控制输出逻辑来使显示屏显示我们想要显示的内容。我们的工程参考了 <a href="https://github.com/rfotino/verilog-tetris" target="_blank" rel="noopener">这个</a> 开源项目，在已有的基础上我们增加了几个新的功能：</p><ul><li>在界面的左上角可以显示下一个出现的方块；</li><li>在界面的右上角显示所得的分数（原项目是在开发板上用数码管显示分数）；</li><li>在游戏开始时显示开场图像，游戏结束时显示结束图像。</li></ul><p>我们的工程文件可以在Github（<a href="https://github.com/ZPinjun/Tetris-base-on-FPGA-VGA" target="_blank" rel="noopener">这里</a>）和CSDN（<a href="https://download.csdn.net/download/qq_39065549/12168594" target="_blank" rel="noopener">这里</a>）上找到。</p><p>我们做的工作难点在于图像的显示。因为VGA是以点阵扫描的形式控制RGB三个颜色通道，所以对于显示方块这种规则几何图形是相对容易实现的。而要用硬件语言显示图像，我们必须先在RAM中存入数字图像的信息，然后在显示时按照映射关系发送给VGA总线。为了实现这一点，我们先用画图工具设计出想要显示的图像，再用Matlab读取数字图像的信息，将每一个像素点的信息转换成二进制数，再按照一定的顺序（三通道分开，先后顺序为R&gt;G&gt;B。每一个通道逐行扫描，由上到下。）将其按照.coe文件的格式写入到.txt文件，最后将后缀改成.coe，即得到了VIVADO可识别的存储信息。之后将该模块整合到工程中，在游戏开始前，先向VGA输出.coe文件中的图像信息，注意这里要严格按照之前设定的顺序输出才行。</p><p>此外我们还想要开发出游戏音效，但是由于时间原因没有做成功。如果大家有改进的想法或者已经实现，可以在Github上发起issues或者pull requests。然而幸运的是，我们的作品最后还是被评为了优秀作品，下面是当时拍的一个展示：</p><iframe height="400" width="600" src="https://player.youku.com/embed/XNDY1MDI1MzMwNA==" frameborder="0" 'allowfullscreen'></iframe> <p><img src="/" alt="展示" class="lazyload" data-src="/2019/08/01/20200427-%E5%A8%81%E6%B5%B7%E6%9A%91%E6%9C%9F%E5%AD%A6%E6%A0%A1%E7%BA%AA%E5%AE%9E/2.jpg"></p><h1 id="生活与食物"><a href="#生活与食物" class="headerlink" title="生活与食物"></a>生活与食物</h1><p>威海市曾经获得联合国“人居环境奖”（the Habitat Scroll of Honour Award），<a href="http://en.volupedia.org/wiki/UN-Habitat_Scroll_of_Honour_Award" target="_blank" rel="noopener">点这里</a>，是一个非常宜居的海滨小城。哈工大威海分校就建在海边，傍晚的时候到沙滩上走走是很惬意的一件事。</p><p><img src="/" alt="沙滩" class="lazyload" data-src="/2019/08/01/20200427-%E5%A8%81%E6%B5%B7%E6%9A%91%E6%9C%9F%E5%AD%A6%E6%A0%A1%E7%BA%AA%E5%AE%9E/8.jpg"></p><p>当然，在海边城市吃海鲜也是很方便的。我们直接去的海鲜市场买生海鲜，然后带到附近的餐馆加工，相对还是划算一些。</p><p><img src="/" alt="食物" class="lazyload" data-src="/2019/08/01/20200427-%E5%A8%81%E6%B5%B7%E6%9A%91%E6%9C%9F%E5%AD%A6%E6%A0%A1%E7%BA%AA%E5%AE%9E/11.jpg"></p><p>最后，放上两张合照，就宣告着威海此行的结束了。</p><p><img src="/" alt="合照" class="lazyload" data-src="/2019/08/01/20200427-%E5%A8%81%E6%B5%B7%E6%9A%91%E6%9C%9F%E5%AD%A6%E6%A0%A1%E7%BA%AA%E5%AE%9E/9.jpg"><br><img src="/" alt="合照" class="lazyload" data-src="/2019/08/01/20200427-%E5%A8%81%E6%B5%B7%E6%9A%91%E6%9C%9F%E5%AD%A6%E6%A0%A1%E7%BA%AA%E5%AE%9E/10.jpg"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;暑期学校简介&quot;&gt;&lt;a href=&quot;#暑期学校简介&quot; class=&quot;headerlink&quot; title=&quot;暑期学校简介&quot;&gt;&lt;/a&gt;暑期学校简介&lt;/h1&gt;&lt;p&gt;哈工大“自动测试与仪器技术”全国研究生暑期学校是由哈尔滨工业大学本部自动化测试与控制研究所和哈工大威海分校共
+      
+    
+    </summary>
+    
+    
+      <category term="纪事" scheme="http://yoursite.com/categories/%E7%BA%AA%E4%BA%8B/"/>
+    
+    
+      <category term="纪事" scheme="http://yoursite.com/tags/%E7%BA%AA%E4%BA%8B/"/>
+    
+  </entry>
+  
 </feed>
