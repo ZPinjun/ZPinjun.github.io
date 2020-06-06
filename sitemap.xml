@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
+    <loc>http://yoursite.com/main/index.html</loc>
     
-    <lastmod>2020-06-06T10:11:10.735Z</lastmod>
+    <lastmod>2020-06-06T15:15:23.991Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/main/index.html</loc>
+    <loc>http://yoursite.com/tags/index.html</loc>
     
-    <lastmod>2020-06-06T10:08:17.024Z</lastmod>
+    <lastmod>2020-06-06T10:11:10.735Z</lastmod>
     
   </url>
   
