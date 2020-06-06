@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>ZPinjun&#39;s Blog</title>
-  
+  <title>Pinjun Zheng&#39;s Page</title>
+  <icon>https://www.gravatar.com/avatar/00b94cd35449c4c92db83df66fb0ac98</icon>
   
   <link href="/atom.xml" rel="self"/>
   
@@ -11,7 +11,7 @@
   
   <author>
     <name>Pinjun Zheng</name>
-    
+    <email>zhengpinjun@126.com</email>
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
