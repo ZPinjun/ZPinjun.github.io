@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-25T09:46:24.987Z</updated>
+  <updated>2020-06-08T13:40:27.740Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AC Multi-Channel Parallel Acquisition and Processing Circuit based on ZYNQ</title>
+    <link href="http://yoursite.com/2020/06/08/20200608-%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/"/>
+    <id>http://yoursite.com/2020/06/08/20200608-%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/</id>
+    <published>2020-06-08T11:49:48.000Z</published>
+    <updated>2020-06-08T13:40:27.740Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><h1 id="Technical-Requirements"><a href="#Technical-Requirements" class="headerlink" title="Technical Requirements"></a>Technical Requirements</h1><ul><li>Equipment area is not less than 200 mm × 180 mm, height is not more than 100 mm;</li><li>The sampling rate of the single voltage acquisition channel is not less than 100 ksps, and the sampling time is not more than 1s. The data bit width is not less than 14 bits;</li><li>The voltage rms error does not exceed 0.5%;</li><li>The number of acquisition channels is not less than 64, and the data of all the channels need to be acquired synchronously;</li><li>The processed data is output using the standard RS 422 interface.</li></ul><h1 id="Overall-Design"><a href="#Overall-Design" class="headerlink" title="Overall Design"></a>Overall Design</h1><h3 id="Hardware-Design"><a href="#Hardware-Design" class="headerlink" title="Hardware Design"></a>Hardware Design</h3><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2020/06/08/20200608-%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/2020-06-08_201007.png" alt="design1" title>                </div>                <div class="image-caption">design1</div>            </figure><h3 id="Software-Design"><a href="#Software-Design" class="headerlink" title="Software Design"></a>Software Design</h3><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2020/06/08/20200608-%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/2020-06-08_201345.png" alt="design2" title>                </div>                <div class="image-caption">design2</div>            </figure><h1 id="Product-amp-Test"><a href="#Product-amp-Test" class="headerlink" title="Product &amp; Test"></a>Product &amp; Test</h1><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2020/06/08/20200608-%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/2020-06-08_201745.png" alt="product" title>                </div>                <div class="image-caption">product</div>            </figure><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/2020/06/08/20200608-%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/2020-06-08_201852.png" alt="product" title>                </div>                <div class="image-caption">product</div>            </figure><p><div style="width:70%;margin:auto"><img src="/2020/06/08/20200608-%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/06/08/20200608-%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/2020-06-08_201852.png" class title="图片信息描述"></div><br><br><img src="/2020/06/08/20200608-%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/06/08/20200608-%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/2020-06-08_201007.png" class title="asd"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;h1 id=&quot;Technical-Requirements&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Project" scheme="http://yoursite.com/tags/Project/"/>
+    
+  </entry>
   
   <entry>
     <title>OneNote同步问题的一个解决方案</title>
