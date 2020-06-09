@@ -34,7 +34,7 @@
 <meta property="og:image" content="https://zpinjun.github.io/2020/06/08/20200608-%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/2020-06-08_201745.png">
 <meta property="og:image" content="https://zpinjun.github.io/2020/06/08/20200608-%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/2020-06-08_201852.png">
 <meta property="article:published_time" content="2020-06-08T11:49:48.000Z">
-<meta property="article:modified_time" content="2020-06-08T15:25:01.705Z">
+<meta property="article:modified_time" content="2020-06-09T09:21:30.374Z">
 <meta property="article:author" content="Pinjun Zheng">
 <meta property="article:tag" content="Project">
 <meta name="twitter:card" content="summary">
@@ -186,7 +186,10 @@
 <li>The number of acquisition channels is not less than 64, and the data of all the channels need to be acquired synchronously.</li>
 <li>The processed data is output using the standard RS 422 interface.</li>
 </ul>
-<h1 id="Overall-Design"><a href="#Overall-Design" class="headerlink" title="Overall Design"></a>Overall Design</h1><h3 id="Hardware-Design"><a href="#Hardware-Design" class="headerlink" title="Hardware Design"></a>Hardware Design</h3><p><img src="/2020/06/08/20200608-%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/2020-06-08_201007.png" width="400" height="280" alt="图片名称"></p>
+<h1 id="Overall-Design"><a href="#Overall-Design" class="headerlink" title="Overall Design"></a>Overall Design</h1><h3 id="Hardware-Design"><a href="#Hardware-Design" class="headerlink" title="Hardware Design"></a>Hardware Design</h3><div style="width:70%;margin:auto">
+<img src="/2020/06/08/20200608-%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/2020-06-08_201007.png" class title="image">
+</div>
+
 <p>The circuit hardware is mainly divided into the following four modules:</p>
 <ul>
 <li>Multi-channel data acquisition module</li>
@@ -194,8 +197,9 @@
 <li>Data export module</li>
 <li>Power supply module</li>
 </ul>
-<h3 id="Software-Design"><a href="#Software-Design" class="headerlink" title="Software Design"></a>Software Design</h3><p>The ZYNQ chip used in this project is a all programmable SoC, which equipped with dual-core ARM Cortex-A9 processors (PS) and Kintex®-7 based programmable logic (PL). We use Verilog language to program PL part to control multiple AD chips to complete the parallel acquisition and data stream transmission task of instantaneous voltage. Use the C language to develop the PS part to complete the calculation of the effective value. The logic of the PL part is packaged into an IP core through the VIVADO software, and the ARM program controls the work of these IPs by reading and writing custom registers. The following figure shows the logical state machine of one of the IP cores:<br><img src="/2020/06/08/20200608-%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/2020-06-08_223915.png" width="500" height="200" alt="图片名称"></p>
-<p>The overall operation process of the software is shown in the following figure:<br><img src="/2020/06/08/20200608-%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/2020-06-08_201345.png" width="500" height="280" alt="图片名称"></p>
+<h3 id="Software-Design"><a href="#Software-Design" class="headerlink" title="Software Design"></a>Software Design</h3><p>The ZYNQ chip used in this project is a all programmable SoC, which equipped with dual-core ARM Cortex-A9 processors (PS) and Kintex®-7 based programmable logic (PL). We use Verilog language to program PL part to control multiple AD chips to complete the parallel acquisition and data stream transmission task of instantaneous voltage. Use the C language to develop the PS part to complete the calculation of the effective value. The logic of the PL part is packaged into an IP core through the VIVADO software, and the ARM program controls the work of these IPs by reading and writing custom registers. The following figure shows the logical state machine of one of the IP cores:</p>
+<img src="/2020/06/08/20200608-%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/2020-06-08_223915.png" class title="image">
+<p>The overall operation process of the software is shown in the following figure:<br><img src="/2020/06/08/20200608-%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/2020-06-08_201345.png" class title="image"></p>
 <ol>
 <li>The ARM processor sends a PS_en rising edge trigger to the data master IP.</li>
 <li>The data master IP works, data is sampled and sent into the FIFO, which loop 1000 times.</li>
@@ -206,21 +210,8 @@
 <li>The ARM processor reads data from the DDR memory.</li>
 <li>The ARM processor performs effective value calculation and exports the result to IP through RS422.</li>
 </ol>
-<h1 id="Product-amp-Test"><a href="#Product-amp-Test" class="headerlink" title="Product &amp; Test"></a>Product &amp; Test</h1><hr>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2020/06/08/20200608-%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/2020-06-08_201745.png" alt="Circuit board" title>
-                </div>
-                <div class="image-caption">Circuit board</div>
-            </figure>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/2020/06/08/20200608-%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/2020-06-08_201852.png" alt="Circuit PCB design" title>
-                </div>
-                <div class="image-caption">Circuit PCB design</div>
-            </figure>
+<h1 id="Product-amp-Test"><a href="#Product-amp-Test" class="headerlink" title="Product &amp; Test"></a>Product &amp; Test</h1><img src="/2020/06/08/20200608-%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/2020-06-08_201745.png" class title="image">
+<img src="/2020/06/08/20200608-%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/2020-06-08_201852.png" class title="image">
 <ul>
 <li>Single channel sampling rate is 167.79 ksps.</li>
 <li>the average time for any channel of the board to complete a data acquisition and calculation process is about 6.590 ms.</li>

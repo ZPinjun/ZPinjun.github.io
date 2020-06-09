@@ -28,16 +28,16 @@
 <meta property="og:site_name" content="Pinjun Zheng&#39;s Page">
 <meta property="og:description" content="IntroductionAlthough most phase recovery algorithms have good robustness to additive noise, when multiplicative noise is present, the reconstruction accuracy will be reduced. However, in some cases, t">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://zpinjun.github.io/main/2020/06/09/20200609-maskPR/2020-06-09_164238.png">
-<meta property="og:image" content="https://zpinjun.github.io/main/2020/06/09/20200609-maskPR/2020-06-09_164313.png">
-<meta property="og:image" content="https://zpinjun.github.io/main/2020/06/09/20200609-maskPR/2020-06-09_164328.png">
-<meta property="og:image" content="https://zpinjun.github.io/main/2020/06/09/20200609-maskPR/2020-06-09_164350.png">
+<meta property="og:image" content="https://zpinjun.github.io/2020/06/09/20200609-maskPR/2020-06-09_164238.png">
+<meta property="og:image" content="https://zpinjun.github.io/2020/06/09/20200609-maskPR/2020-06-09_164313.png">
+<meta property="og:image" content="https://zpinjun.github.io/2020/06/09/20200609-maskPR/2020-06-09_164328.png">
+<meta property="og:image" content="https://zpinjun.github.io/2020/06/09/20200609-maskPR/2020-06-09_164350.png">
 <meta property="article:published_time" content="2020-06-09T08:36:52.000Z">
-<meta property="article:modified_time" content="2020-06-09T08:58:35.084Z">
+<meta property="article:modified_time" content="2020-06-09T09:25:24.514Z">
 <meta property="article:author" content="Pinjun Zheng">
 <meta property="article:tag" content="Research">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://zpinjun.github.io/main/2020/06/09/20200609-maskPR/2020-06-09_164238.png">
+<meta name="twitter:image" content="https://zpinjun.github.io/2020/06/09/20200609-maskPR/2020-06-09_164238.png">
     
         <link rel="alternate" type="application/atom+xml" title="Pinjun Zheng&#39;s Page" href="/atom.xml">
     
@@ -176,13 +176,25 @@
 <li>Extract pure measurement data</li>
 <li>Implement phase recovery</li>
 </ol>
-<h1 id="Phase-Mask-Technique"><a href="#Phase-Mask-Technique" class="headerlink" title="Phase Mask Technique"></a>Phase Mask Technique</h1><p><img src="/main/2020/06/09/20200609-maskPR/2020-06-09_164238.png" width="400" alt="图片名称"></p>
+<h1 id="Phase-Mask-Technique"><a href="#Phase-Mask-Technique" class="headerlink" title="Phase Mask Technique"></a>Phase Mask Technique</h1><div style="width:70%;margin:auto">
+<img src="/2020/06/09/20200609-maskPR/2020-06-09_164238.png" class title="image">
+</div>
+
 <p>Mask technique is widely used in the fields of optics, image encryption, microscopic imaging, and speech signal processing, etc. There are many methods for generating a phase mask, for example ,a designed phase mask can be encoded in a computer-generated off-axis hologram and is applied on a Spatial Light Modulator (SLM) which already has a hologram with the lens function. By introducing the designed phase mask, we can achieve the cyclic shift measurement process.</p>
-<h1 id="Determine-the-Noise-Boundary"><a href="#Determine-the-Noise-Boundary" class="headerlink" title="Determine the Noise Boundary"></a>Determine the Noise Boundary</h1><p><img src="/main/2020/06/09/20200609-maskPR/2020-06-09_164313.png" width="400" alt="图片名称"></p>
+<h1 id="Determine-the-Noise-Boundary"><a href="#Determine-the-Noise-Boundary" class="headerlink" title="Determine the Noise Boundary"></a>Determine the Noise Boundary</h1><div style="width:110%;margin:auto">
+<img src="/2020/06/09/20200609-maskPR/2020-06-09_164313.png" class title="image">
+</div>
+
 <p>To determine the boundary of local multiplicative noise, first we perform two magnitude measurements (with a shift difference through phase mask technique) on the original signal. Then we do reverse cyclic shift, and calculate absolute difference. by binarizing this absolute difference, we can determine the boundary of noise.</p>
-<h1 id="Extract-Pure-Measurement-Data"><a href="#Extract-Pure-Measurement-Data" class="headerlink" title="Extract Pure Measurement Data"></a>Extract Pure Measurement Data</h1><p><img src="/main/2020/06/09/20200609-maskPR/2020-06-09_164328.png" width="400" alt="图片名称"></p>
+<h1 id="Extract-Pure-Measurement-Data"><a href="#Extract-Pure-Measurement-Data" class="headerlink" title="Extract Pure Measurement Data"></a>Extract Pure Measurement Data</h1><div style="width:100%;margin:auto">
+<img src="/2020/06/09/20200609-maskPR/2020-06-09_164328.png" class title="image">
+</div>
+
 <p>Since we have obtained the noise boundary, we can shift the interest measurements to the noise-free area by cyclic shift and record it until all needed data are measured.</p>
-<h1 id="Overall-Framework"><a href="#Overall-Framework" class="headerlink" title="Overall Framework"></a>Overall Framework</h1><p> <img src="/main/2020/06/09/20200609-maskPR/2020-06-09_164350.png" width="400" height="280" alt="图片名称"></p>
+<h1 id="Overall-Framework"><a href="#Overall-Framework" class="headerlink" title="Overall Framework"></a>Overall Framework</h1><div style="width:120%;margin:auto">
+<img src="/2020/06/09/20200609-maskPR/2020-06-09_164350.png" class title="image">
+</div>
+
 
         </div>
 
