@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zpinjun.github.io/main/"/>
-  <updated>2020-06-09T14:24:46.536Z</updated>
+  <updated>2020-06-09T15:22:48.041Z</updated>
   <id>https://zpinjun.github.io/main/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>A Novel Phase Retrieval Algorithm for Parameterized Signal</title>
+    <link href="https://zpinjun.github.io/main/2020/06/09/20200609-parameterizedPR/"/>
+    <id>https://zpinjun.github.io/main/2020/06/09/20200609-parameterizedPR/</id>
+    <published>2020-06-09T14:33:21.000Z</published>
+    <updated>2020-06-09T15:22:48.041Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Using the notation $[n]_k:=\{k,k+1,\dots,k+n-1\}$，specially，$[n]:=[n]_0$. And the notation $\widehat{\mathbf{X}_N}$ represents $N$ point DFT of $\mathbf{x}$.</p><p>In phase Fourier retrieval problem, we consider taht original signal $\mathbf{s}\in\mathbb{C}^M$，and measurement $\mathbf{y}\in\mathbb{R}^N$. The following relationship is satisfied between the two signal:<br>    \begin{equation}<br>        \mathbf{y}[n] = | \widehat{\mathbf{S}_N}[n] |^2, \forall n\in[N].<br>    \end{equation}<br>The goal of the phase retrieval problem is to reconstruct $\mathbf{s}$ from $\mathbf{y}$.</p><p>In this study we assume that the original signal conforms to the form $s(t)=\sum\limits_{k=1}^Kc_kh(t-t_k)$. In discrete form, $\mathbf{s}[m]=\sum\limits_{k=1}^Kc_k\mathbf{h}[m-m_k], \forall m\in [M]$. Because this kind of signal is completely determined by a limited number of parameters, we call it a parameterized signal. Under this assumption, recovering the original signal is equivalent to recovering $2K$ parameters $\{c_1,c_2,\dots,c_K\}$ and $\{m_1,m_2,\dots,m_K\}$. </p><h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>At present, we have completed a super-linear convergence iterative algorithm to solve the amplitude parameters.  However, for delay parameters, most of the traditional methods are based on search algorithms.  The disadvantage of this kind of method is that it will generate a huge amount of calculation for large-scale signals, and we next want to focus on avoiding this problem.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;p&gt;Using the notation $[n]_k:=\{k
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Research" scheme="https://zpinjun.github.io/main/tags/Research/"/>
+    
+  </entry>
   
   <entry>
     <title>A Handheld Medical Terminal Development Based on Qt</title>
