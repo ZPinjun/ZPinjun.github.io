@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://zpinjun.github.io/2019/08/01/20200427-%E5%A8%81%E6%B5%B7%E6%9A%91%E6%9C%9F%E5%AD%A6%E6%A0%A1%E7%BA%AA%E5%AE%9E/1.jpg">
 <meta property="og:image" content="https://zpinjun.github.io/2019/08/01/20200427-%E5%A8%81%E6%B5%B7%E6%9A%91%E6%9C%9F%E5%AD%A6%E6%A0%A1%E7%BA%AA%E5%AE%9E/2.jpg">
 <meta property="article:published_time" content="2019-08-01T08:23:32.000Z">
-<meta property="article:modified_time" content="2020-06-15T04:28:06.268Z">
+<meta property="article:modified_time" content="2020-06-15T04:57:27.029Z">
 <meta property="article:author" content="Pinjun Zheng">
 <meta property="article:tag" content="Project">
 <meta name="twitter:card" content="summary">
@@ -184,9 +184,6 @@
 <p>Our project can be found on my <a href="https://github.com/ZPinjun/Tetris-base-on-FPGA-VGA" target="_blank" rel="noopener">Github</a> and <a href="https://download.csdn.net/download/qq_39065549/12168594" target="_blank" rel="noopener">CSDN</a>.</p>
 <p>The difficulty of the work we do is the display of images.  Because VGA controls the three RGB color channels in the form of dot matrix scanning, it is relatively easy to implement regular geometric figures such as squares.  To display the image in hardware language, we must first store the digital image information in RAM, and then send it to the VGA bus according to the mapping relationship during display.  In order to achieve this, we first use the drawing tool to design the image we want to display, and then use Matlab to read the information of the digital image, convert the information of each pixel into a binary number, and then follow a certain order (three channels separate,  The sequence is R&gt;G&gt;B. Each channel is scanned line by line, from top to bottom.). Write it to the .txt file according to the format of the .coe file, and finally change the suffix to .coe to obtain the storage information recognized by VIVADO. Then integrate the module into the project. Before the game starts, first output the image information in the .coe file to the VGA. Note that it must be output strictly in the order set before.</p>
 <p>Fortunately, our work was finally rated as an excellent work. The following is a display taken at the time:<br>(Because github page does not allow loading in iframe, please see this video on: <a href="https://youtu.be/LLhhkAAC9Gc" target="_blank" rel="noopener">https://youtu.be/LLhhkAAC9Gc</a>)</p>
-
-<iframe height="400" width="600" src="http://www.youtube.com/embed/LLhhkAAC9Gc" frameborder="0" 'allowfullscreen'></iframe>
- 
 <div style="width:100%;margin:auto">
 <img src="/2019/08/01/20200427-%E5%A8%81%E6%B5%B7%E6%9A%91%E6%9C%9F%E5%AD%A6%E6%A0%A1%E7%BA%AA%E5%AE%9E/2.jpg" class title="image">
 </div>
