@@ -21,23 +21,22 @@
     
     
     <meta name="keywords" content="Research">
-    <meta name="description" content="IntroductionAlthough most phase recovery algorithms have good robustness to additive noise, when multiplicative noise is present, the reconstruction accuracy will be reduced. However, in some cases, t">
+    <meta name="description" content="AbstractPhaseless measurement is widely used in various fields, and phase retrieval is a key step in signal reconstruction of phaseless measurement. The occurrence of outliers will cause the optimal s">
 <meta property="og:type" content="article">
 <meta property="og:title" content="A Phase Retrieval Framework under Local Multiplicative Noise">
 <meta property="og:url" content="https://zpinjun.github.io/main/2020/06/09/20200609-maskPR/index.html">
 <meta property="og:site_name" content="Pinjun Zheng&#39;s Page">
-<meta property="og:description" content="IntroductionAlthough most phase recovery algorithms have good robustness to additive noise, when multiplicative noise is present, the reconstruction accuracy will be reduced. However, in some cases, t">
+<meta property="og:description" content="AbstractPhaseless measurement is widely used in various fields, and phase retrieval is a key step in signal reconstruction of phaseless measurement. The occurrence of outliers will cause the optimal s">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://zpinjun.github.io/2020/06/09/20200609-maskPR/2020-06-09_164238.png">
-<meta property="og:image" content="https://zpinjun.github.io/2020/06/09/20200609-maskPR/2020-06-09_164313.png">
-<meta property="og:image" content="https://zpinjun.github.io/2020/06/09/20200609-maskPR/2020-06-09_164328.png">
-<meta property="og:image" content="https://zpinjun.github.io/2020/06/09/20200609-maskPR/2020-06-09_164350.png">
+<meta property="og:image" content="https://zpinjun.github.io/2020/06/09/20200609-maskPR/2020-07-22_203049.png">
+<meta property="og:image" content="https://zpinjun.github.io/2020/06/09/20200609-maskPR/2020-07-22_205041.png">
+<meta property="og:image" content="https://zpinjun.github.io/2020/06/09/20200609-maskPR/2020-07-22_205142.png">
 <meta property="article:published_time" content="2020-06-09T08:36:52.000Z">
-<meta property="article:modified_time" content="2020-06-09T09:26:10.230Z">
+<meta property="article:modified_time" content="2020-07-22T12:54:00.792Z">
 <meta property="article:author" content="Pinjun Zheng">
 <meta property="article:tag" content="Research">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://zpinjun.github.io/2020/06/09/20200609-maskPR/2020-06-09_164238.png">
+<meta name="twitter:image" content="https://zpinjun.github.io/2020/06/09/20200609-maskPR/2020-07-22_203049.png">
     
         <link rel="alternate" type="application/atom+xml" title="Pinjun Zheng&#39;s Page" href="/atom.xml">
     
@@ -146,7 +145,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Introduction"><span class="post-toc-number">1.</span> <span class="post-toc-text">Introduction</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Phase-Mask-Technique"><span class="post-toc-number">2.</span> <span class="post-toc-text">Phase Mask Technique</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Determine-the-Noise-Boundary"><span class="post-toc-number">3.</span> <span class="post-toc-text">Determine the Noise Boundary</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Extract-Pure-Measurement-Data"><span class="post-toc-number">4.</span> <span class="post-toc-text">Extract Pure Measurement Data</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Overall-Framework"><span class="post-toc-number">5.</span> <span class="post-toc-text">Overall Framework</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Abstract"><span class="post-toc-number">1.</span> <span class="post-toc-text">Abstract</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Main-work"><span class="post-toc-number">2.</span> <span class="post-toc-text">Main work</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Simulation-results"><span class="post-toc-number">3.</span> <span class="post-toc-text">Simulation results</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Hardware-experiment"><span class="post-toc-number">4.</span> <span class="post-toc-text">Hardware experiment</span></a></li></ol>
         </nav>
     </aside>
 
@@ -170,30 +169,28 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Although most phase recovery algorithms have good robustness to additive noise, when multiplicative noise is present, the reconstruction accuracy will be reduced. However, in some cases, the magnitude measurement is often accompanied by local multiplicative noise. For example, in X-ray or electron diffraction experiments, the signal in the central part of the diffraction pattern is often missing due to a beamstop, or is overexposed due to a direct beam, or a hole in the detector, which is called the missing data problem. Some solutions by improving instrument setting were proposed to confine the missing data within the centrospeckle. The missing data problem can be equivalent to a local multiplicative noise (zero intensity) in the central area of the diffraction pattern, resulting in the data missing. In this paper, we consider general case of local multiplicative noise in magnitude measurement, and we proposed a effective measurement framework to obtain pure data for phase retrieval under local multiplicative noise.  Then based on DFT frequency domain cyclic shift theorem and the phase mask technique, our proposed method can be divided into three steps: </p>
-<ol>
-<li>Determine the noise boundary</li>
-<li>Extract pure measurement data</li>
-<li>Implement phase recovery</li>
-</ol>
-<h1 id="Phase-Mask-Technique"><a href="#Phase-Mask-Technique" class="headerlink" title="Phase Mask Technique"></a>Phase Mask Technique</h1><div style="width:70%;margin:auto">
-<img src="/2020/06/09/20200609-maskPR/2020-06-09_164238.png" class title="image">
+            <h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>Phaseless measurement is widely used in various fields, and phase retrieval is a key step in signal reconstruction of phaseless measurement. The occurrence of outliers will cause the optimal solution of the traditional phase retrieval objective function to deviate from the original signal, thereby reducing the reconstruction accuracy. This paper proposes to modify the objective function by introducing a weight vector or matrix so that its optimal solution will still approximate the original signal when outliers appear, and proposes a specific implementation strategy for this idea under the background of Fourier phase retrieval. We proposes a two-channel measurement structure, using discrete Fourier transform frequency domain cyclic shift theorem and mask technique to obtain a weight vector or matrix. For the improved objective function, we use the majorization-minimization framework to derive an iterative algorithm to get optimal solution. Extensive simulation and hardware experiments show that the proposed method can effectively suppress the adverse effects of outliers.</p>
+<h1 id="Main-work"><a href="#Main-work" class="headerlink" title="Main work"></a>Main work</h1><p>The main work of this research can be summarized as follows.</p>
+<p>(1) We propose a measurement structure of two-channel parallel measurement for phaseless Fourier measurement. By using the mask technique and the discrete Fourier transformation frequency domain cyclic shift theorem, the reliability of each measurement data can be roughly measured. At locations where outliers or strong noises appear, the reliability is correspondingly low. In normal areas, reliability is higher. This method of obtaining the reliability of the measurement data through the two-channel measurement structure can provide guidance for the phase recovery process.</p>
+<p>(2) By introducing a weight vector or matrix, we modify the objective function of phase recovery so that its solution can still be close to the original signal under phaseless Fourier measurement with additive noise and outliers. Besides, drawing on the principle of the PRIME algorithm, we use the majorization-minimization framework to design a new phase recovery algorithm for the improved objective function.<br>For the mapping parameter in the proposed measurement structure, we have done a lot of Monte Carlo experiments to provide empirical guidance for choosing the best value of this parameter.</p>
+<p>(3) We perform a large number of simulation experiments to verify the performance of the proposed algorithm. Compared with other phase recovery algorithms, our algorithm is highly robust to outliers in phaseless Fourier measurement because of the introduction of reliability weights. Besides, we verified the actual operability of the proposed measurement structure and phase recovery algorithm through hardware experiments.<br>The experimental results show that our proposed measurement structure and phase recovery algorithm can effectively eliminate the effects of outliers and reconstruct the original signal with high accuracy.</p>
+<h1 id="Simulation-results"><a href="#Simulation-results" class="headerlink" title="Simulation results"></a>Simulation results</h1><div style="width:100%;margin:auto">
+<img src="/2020/06/09/20200609-maskPR/2020-07-22_203049.png" class title="image">
 </div>
 
-<p>Mask technique is widely used in the fields of optics, image encryption, microscopic imaging, and speech signal processing, etc. There are many methods for generating a phase mask, for example ,a designed phase mask can be encoded in a computer-generated off-axis hologram and is applied on a Spatial Light Modulator (SLM) which already has a hologram with the lens function. By introducing the designed phase mask, we can achieve the cyclic shift measurement process.</p>
-<h1 id="Determine-the-Noise-Boundary"><a href="#Determine-the-Noise-Boundary" class="headerlink" title="Determine the Noise Boundary"></a>Determine the Noise Boundary</h1><div style="width:100%;margin:auto">
-<img src="/2020/06/09/20200609-maskPR/2020-06-09_164313.png" class title="image">
+
+
+<div style="width:100%;margin:auto">
+<img src="/2020/06/09/20200609-maskPR/2020-07-22_205041.png" class title="image">
 </div>
 
-<p>To determine the boundary of local multiplicative noise, first we perform two magnitude measurements (with a shift difference through phase mask technique) on the original signal. Then we do reverse cyclic shift, and calculate absolute difference. by binarizing this absolute difference, we can determine the boundary of noise.</p>
-<h1 id="Extract-Pure-Measurement-Data"><a href="#Extract-Pure-Measurement-Data" class="headerlink" title="Extract Pure Measurement Data"></a>Extract Pure Measurement Data</h1><div style="width:100%;margin:auto">
-<img src="/2020/06/09/20200609-maskPR/2020-06-09_164328.png" class title="image">
+
+<h1 id="Hardware-experiment"><a href="#Hardware-experiment" class="headerlink" title="Hardware experiment"></a>Hardware experiment</h1><div style="width:100%;margin:auto">
+<img src="/2020/06/09/20200609-maskPR/2020-07-22_205142.png" class title="image">
 </div>
 
-<p>Since we have obtained the noise boundary, we can shift the interest measurements to the noise-free area by cyclic shift and record it until all needed data are measured.</p>
-<h1 id="Overall-Framework"><a href="#Overall-Framework" class="headerlink" title="Overall Framework"></a>Overall Framework</h1><div style="width:100%;margin:auto">
-<img src="/2020/06/09/20200609-maskPR/2020-06-09_164350.png" class title="image">
-</div>
+
+
 
 
         </div>
