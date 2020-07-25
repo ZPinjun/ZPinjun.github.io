@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zpinjun.github.io/main/"/>
-  <updated>2020-06-09T15:22:48.041Z</updated>
+  <updated>2020-07-25T07:26:15.510Z</updated>
   <id>https://zpinjun.github.io/main/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Weighted Phase Retrieval of Fourier Measurement with Outliers&amp;#58 Measurement Structure and Reconstruction Algorithm</title>
+    <link href="https://zpinjun.github.io/main/2020/07/25/20200725-WeightedPhaseRetrieval/"/>
+    <id>https://zpinjun.github.io/main/2020/07/25/20200725-WeightedPhaseRetrieval/</id>
+    <published>2020-07-25T07:19:59.000Z</published>
+    <updated>2020-07-25T07:26:15.510Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>Phaseless measurement is widely used in various fields, and phase retrieval is a key step in signal reconstruction of phaseless measurement. The occurrence of outliers will cause the optimal solution of the traditional phase retrieval objective function to deviate from the original signal, thereby reducing the reconstruction accuracy. This paper proposes to modify the objective function by introducing a weight vector or matrix so that its optimal solution will still approximate the original signal when outliers appear, and proposes a specific implementation strategy for this idea under the background of Fourier phase retrieval. We proposes a two-channel measurement structure, using discrete Fourier transform frequency domain cyclic shift theorem and mask technique to obtain a weight vector or matrix. For the improved objective function, we use the majorization-minimization framework to derive an iterative algorithm to get optimal solution. Extensive simulation and hardware experiments show that the proposed method can effectively suppress the adverse effects of outliers.</p><h1 id="Main-work"><a href="#Main-work" class="headerlink" title="Main work"></a>Main work</h1><p>The main work of this research can be summarized as follows.</p><p>(1) We propose a measurement structure of two-channel parallel measurement for phaseless Fourier measurement. By using the mask technique and the discrete Fourier transformation frequency domain cyclic shift theorem, the reliability of each measurement data can be roughly measured. At locations where outliers or strong noises appear, the reliability is correspondingly low. In normal areas, reliability is higher. This method of obtaining the reliability of the measurement data through the two-channel measurement structure can provide guidance for the phase recovery process.</p><p>(2) By introducing a weight vector or matrix, we modify the objective function of phase recovery so that its solution can still be close to the original signal under phaseless Fourier measurement with additive noise and outliers. Besides, drawing on the principle of the PRIME algorithm, we use the majorization-minimization framework to design a new phase recovery algorithm for the improved objective function. For the mapping parameter in the proposed measurement structure, we have done a lot of Monte Carlo experiments to provide empirical guidance for choosing the best value of this parameter.</p><p>(3) We perform a large number of simulation experiments to verify the performance of the proposed algorithm. Compared with other phase recovery algorithms, our algorithm is highly robust to outliers in phaseless Fourier measurement because of the introduction of reliability weights. Besides, we verified the actual operability of the proposed measurement structure and phase recovery algorithm through hardware experiments. The experimental results show that our proposed measurement structure and phase recovery algorithm can effectively eliminate the effects of outliers and reconstruct the original signal with high accuracy.</p><h1 id="Simulation-results"><a href="#Simulation-results" class="headerlink" title="Simulation results"></a>Simulation results</h1><div style="width:100%;margin:auto"><img src="/2020/07/25/20200725-WeightedPhaseRetrieval/2020-07-22_203049.png" class title="image"></div><div style="width:100%;margin:auto"><img src="/2020/07/25/20200725-WeightedPhaseRetrieval/2020-07-22_205041.png" class title="image"></div><h1 id="Hardware-experiment"><a href="#Hardware-experiment" class="headerlink" title="Hardware experiment"></a>Hardware experiment</h1><div style="width:100%;margin:auto"><img src="/2020/07/25/20200725-WeightedPhaseRetrieval/2020-07-22_205142.png" class title="image"></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Abstract&quot;&gt;&lt;a href=&quot;#Abstract&quot; class=&quot;headerlink&quot; title=&quot;Abstract&quot;&gt;&lt;/a&gt;Abstract&lt;/h1&gt;&lt;p&gt;Phaseless measurement is widely used in variou
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Research" scheme="https://zpinjun.github.io/main/tags/Research/"/>
+    
+  </entry>
   
   <entry>
     <title>A Novel Phase Retrieval Algorithm for Parameterized Signal</title>
@@ -30,30 +54,6 @@
       
       
         &lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;p&gt;Using the notation $[n]_k:=\{k
-      
-    
-    </summary>
-    
-    
-    
-      <category term="Research" scheme="https://zpinjun.github.io/main/tags/Research/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>A Phase Retrieval Framework under Local Multiplicative Noise</title>
-    <link href="https://zpinjun.github.io/main/2020/06/09/20200609-maskPR/"/>
-    <id>https://zpinjun.github.io/main/2020/06/09/20200609-maskPR/</id>
-    <published>2020-06-09T08:36:52.000Z</published>
-    <updated>2020-07-22T12:54:00.792Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>Phaseless measurement is widely used in various fields, and phase retrieval is a key step in signal reconstruction of phaseless measurement. The occurrence of outliers will cause the optimal solution of the traditional phase retrieval objective function to deviate from the original signal, thereby reducing the reconstruction accuracy. This paper proposes to modify the objective function by introducing a weight vector or matrix so that its optimal solution will still approximate the original signal when outliers appear, and proposes a specific implementation strategy for this idea under the background of Fourier phase retrieval. We proposes a two-channel measurement structure, using discrete Fourier transform frequency domain cyclic shift theorem and mask technique to obtain a weight vector or matrix. For the improved objective function, we use the majorization-minimization framework to derive an iterative algorithm to get optimal solution. Extensive simulation and hardware experiments show that the proposed method can effectively suppress the adverse effects of outliers.</p><h1 id="Main-work"><a href="#Main-work" class="headerlink" title="Main work"></a>Main work</h1><p>The main work of this research can be summarized as follows.</p><p>(1) We propose a measurement structure of two-channel parallel measurement for phaseless Fourier measurement. By using the mask technique and the discrete Fourier transformation frequency domain cyclic shift theorem, the reliability of each measurement data can be roughly measured. At locations where outliers or strong noises appear, the reliability is correspondingly low. In normal areas, reliability is higher. This method of obtaining the reliability of the measurement data through the two-channel measurement structure can provide guidance for the phase recovery process.</p><p>(2) By introducing a weight vector or matrix, we modify the objective function of phase recovery so that its solution can still be close to the original signal under phaseless Fourier measurement with additive noise and outliers. Besides, drawing on the principle of the PRIME algorithm, we use the majorization-minimization framework to design a new phase recovery algorithm for the improved objective function.<br>For the mapping parameter in the proposed measurement structure, we have done a lot of Monte Carlo experiments to provide empirical guidance for choosing the best value of this parameter.</p><p>(3) We perform a large number of simulation experiments to verify the performance of the proposed algorithm. Compared with other phase recovery algorithms, our algorithm is highly robust to outliers in phaseless Fourier measurement because of the introduction of reliability weights. Besides, we verified the actual operability of the proposed measurement structure and phase recovery algorithm through hardware experiments.<br>The experimental results show that our proposed measurement structure and phase recovery algorithm can effectively eliminate the effects of outliers and reconstruct the original signal with high accuracy.</p><h1 id="Simulation-results"><a href="#Simulation-results" class="headerlink" title="Simulation results"></a>Simulation results</h1><div style="width:100%;margin:auto"><img src="/2020/06/09/20200609-maskPR/2020-07-22_203049.png" class title="image"></div><div style="width:100%;margin:auto"><img src="/2020/06/09/20200609-maskPR/2020-07-22_205041.png" class title="image"></div><h1 id="Hardware-experiment"><a href="#Hardware-experiment" class="headerlink" title="Hardware experiment"></a>Hardware experiment</h1><div style="width:100%;margin:auto"><img src="/2020/06/09/20200609-maskPR/2020-07-22_205142.png" class title="image"></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Abstract&quot;&gt;&lt;a href=&quot;#Abstract&quot; class=&quot;headerlink&quot; title=&quot;Abstract&quot;&gt;&lt;/a&gt;Abstract&lt;/h1&gt;&lt;p&gt;Phaseless measurement is widely used in variou
       
     
     </summary>
