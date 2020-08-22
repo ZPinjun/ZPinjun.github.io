@@ -14,7 +14,7 @@
     
     
     
-    <title>A Novel Phase Retrieval Algorithm for Parameterized Signal | Pinjun Zheng&#39;s Page</title>
+    <title>Sparse Fourier Phase Retrieval Using Prony’s Method | Pinjun Zheng&#39;s Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
@@ -23,7 +23,7 @@
     <meta name="keywords" content="Research">
     <meta name="description" content="AbstractThe sparse prior can effectively improve the success probability of phase retrieval reconstruction. However, sparse phase retrieval algorithms such as GESPAR need to search for the support set">
 <meta property="og:type" content="article">
-<meta property="og:title" content="A Novel Phase Retrieval Algorithm for Parameterized Signal">
+<meta property="og:title" content="Sparse Fourier Phase Retrieval Using Prony’s Method">
 <meta property="og:url" content="https://zpinjun.github.io/main/2020/06/09/20200609-parameterizedPR/index.html">
 <meta property="og:site_name" content="Pinjun Zheng&#39;s Page">
 <meta property="og:description" content="AbstractThe sparse prior can effectively improve the success probability of phase retrieval reconstruction. However, sparse phase retrieval algorithms such as GESPAR need to search for the support set">
@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://zpinjun.github.io/2020/06/09/20200609-parameterizedPR/2020-08-22_102918.png">
 <meta property="og:image" content="https://zpinjun.github.io/2020/06/09/20200609-parameterizedPR/2020-08-22_103015.png">
 <meta property="article:published_time" content="2020-06-09T14:33:21.000Z">
-<meta property="article:modified_time" content="2020-08-22T02:43:15.076Z">
+<meta property="article:modified_time" content="2020-08-22T02:47:31.692Z">
 <meta property="article:author" content="Pinjun Zheng">
 <meta property="article:tag" content="Research">
 <meta name="twitter:card" content="summary">
@@ -109,7 +109,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">A Novel Phase Retrieval Algorithm for Parameterized Signal</div>
+        <div class="flex-col header-title ellipsis">Sparse Fourier Phase Retrieval Using Prony’s Method</div>
         
         
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
@@ -121,7 +121,7 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">A Novel Phase Retrieval Algorithm for Parameterized Signal</h1>
+        <h1 class="title">Sparse Fourier Phase Retrieval Using Prony’s Method</h1>
         <h5 class="subtitle">
             
                 <time datetime="2020-06-09T14:33:21.000Z" itemprop="datePublished" class="page-time">
@@ -153,7 +153,7 @@
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">A Novel Phase Retrieval Algorithm for Parameterized Signal</h1>
+        <h1 class="post-card-title">Sparse Fourier Phase Retrieval Using Prony’s Method</h1>
         <div class="post-meta">
             <time class="post-time" title="2020-06-09 22:33:21" datetime="2020-06-09T14:33:21.000Z"  itemprop="datePublished">2020-06-09</time>
 
@@ -169,7 +169,7 @@
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>The sparse prior can effectively improve the success probability of phase retrieval reconstruction. However, sparse phase retrieval algorithms such as GESPAR need to search for the support set, which leads  to a long time to search for the correct support for large-scale signals. This letter proposes that for sparse Fourier phase retrieval, the support interval can be directly determined by the Prony’s method,  and the possible support sets are determined into a small range through a simple reordering step. The simulation results prove that this is more efficient than the direct support search strategy. To complete phase retrieval, we also use a variant of Chebyshev’s method that proved to have a higher  efficiency index than the damped Gauss-Newton method used in GESPAR algorithm to recover weights.</p>
-<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Phase retrieval is a widespread inverse problem that focus on recovering a signal given the magnitude of its  Fourier transform. It arises in various fields of science and engineering, including crystallography, radar waveform optimization, asronomy, and optical microscopy. Since the phase retrieval problem is ill-posed and NP-hard, there is no closed-form solution. Research in recent years has shown that sparsity prior can effectively improve the performance of phase retrieval algorithms. Shechtman \textit{et al.} proposed a greedy algorithm called GESPAR for sparse phase retrieval in 2014. The GESPAR algorithm uses a two-stage strategy. It uses the 2-opt method to search for the support set,  and then uses the damped Gauss-Newton method to optimize the amplitude values on each updated support set. he GESPAR algorithm has been successfully applied in many fields, such as X-ray coherent diffraction imaging and  direction of arrival estimation. However, in addition to these encouraging results, the GESPAR algorithm also has an obvious flaw. That is because the support set is determined by search steps, it is impractical for large-scale signals.</p>
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Phase retrieval is a widespread inverse problem that focus on recovering a signal given the magnitude of its  Fourier transform. It arises in various fields of science and engineering, including crystallography, radar waveform optimization, asronomy, and optical microscopy. Since the phase retrieval problem is ill-posed and NP-hard, there is no closed-form solution. Research in recent years has shown that sparsity prior can effectively improve the performance of phase retrieval algorithms. Shechtman <em>et al.</em> proposed a greedy algorithm called GESPAR for sparse phase retrieval in 2014. The GESPAR algorithm uses a two-stage strategy. It uses the 2-opt method to search for the support set,  and then uses the damped Gauss-Newton method to optimize the amplitude values on each updated support set. he GESPAR algorithm has been successfully applied in many fields, such as X-ray coherent diffraction imaging and  direction of arrival estimation. However, in addition to these encouraging results, the GESPAR algorithm also has an obvious flaw. That is because the support set is determined by search steps, it is impractical for large-scale signals.</p>
 <p>This paper proposes a novel Fourier phase retrieval method with sparse prior. We pointed out that position intervals of the support set can be directly calculated by using Prony’s method, and then the possible support set can be determined into a small range through a simple reordering step.Then, we use a variant of the Cheyshev’s method that have a higher order of convergence than the  damped Gauss-Newton method to recover the amplitude values.</p>
 <h1 id="Problem-formulation"><a href="#Problem-formulation" class="headerlink" title="Problem formulation"></a>Problem formulation</h1><p>Using the notation $[n]_k:=\{k,k+1,\dots,k+n-1\}\subseteq\mathbb{N}$,  $[n] = [n]_0$, and defining $\widehat{\mathbf{x}_N}$ is the $N$-point DFT result of signal $\mathbf{x}$, we consider the phase retrieval problem that recover $\mathbf{x}\in\mathbb{C}^M$ given $\mathbf{y}\in\mathbb{R}^N$, and these two signals satisfy<br>\begin{equation}<br>   \mathbf{y}[n] = |\widehat{\mathbf{x}_N}[n]|^2,   n\in[N],<br>\end{equation} where $M&lt;N$. </p>
 <p>We assume that $\mathbf{x}$ is a sparse signal of the form $\mathbf{x}[m]=\sum_{k=1}^{K}c_k\mathbf{h}[m-m_k], m\in[M]$, where $\mathbf{h}$ is a known basis function. In other words, the sparse bases are composed of a basis and its equally spaced displacements. If K is known beforehand, the original signal $\mathbf{x}$ can be uniquely determined by $2K$ parameters $\{c_i\}_{i=1}^K$ and $\{m_i\}_{i=1}^K$. Note $c_i\in\mathbb{R}$, $m_i\in[M]$, $\forall i\in[K]_1$. In this paper we aim to recover weights $\{c_i\}_{i=1}^K$ and support $\{m_i\}_{i=1}^K$ from the measurement $\mathbf{y}$.</p>
@@ -179,7 +179,7 @@
 <img src="/2020/06/09/20200609-parameterizedPR/2020-08-22_102918.png" class title="image">
 </div>
 
-<p><br><br><br><br><br></p>
+<p><br><br><br></p>
 <div style="width:100%;margin:auto">
 <img src="/2020/06/09/20200609-parameterizedPR/2020-08-22_103015.png" class title="image">
 </div>
@@ -210,7 +210,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://zpinjun.github.io/main/2020/06/09/20200609-parameterizedPR/&title=《A Novel Phase Retrieval Algorithm for Parameterized Signal》 — Pinjun Zheng's Page&pic=https://zpinjun.github.io/main/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://zpinjun.github.io/main/2020/06/09/20200609-parameterizedPR/&title=《Sparse Fourier Phase Retrieval Using Prony’s Method》 — Pinjun Zheng's Page&pic=https://zpinjun.github.io/main/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -220,7 +220,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://zpinjun.github.io/main/2020/06/09/20200609-parameterizedPR/&title=《A Novel Phase Retrieval Algorithm for Parameterized Signal》 — Pinjun Zheng's Page&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://zpinjun.github.io/main/2020/06/09/20200609-parameterizedPR/&title=《Sparse Fourier Phase Retrieval Using Prony’s Method》 — Pinjun Zheng's Page&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -230,7 +230,7 @@
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《A Novel Phase Retrieval Algorithm for Parameterized Signal》 — Pinjun Zheng's Page&url=https://zpinjun.github.io/main/2020/06/09/20200609-parameterizedPR/&via=https://zpinjun.github.io/main" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Sparse Fourier Phase Retrieval Using Prony’s Method》 — Pinjun Zheng's Page&url=https://zpinjun.github.io/main/2020/06/09/20200609-parameterizedPR/&via=https://zpinjun.github.io/main" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
@@ -343,7 +343,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://zpinjun.github.io/main/2020/06/09/20200609-parameterizedPR/&title=《A Novel Phase Retrieval Algorithm for Parameterized Signal》 — Pinjun Zheng's Page&pic=https://zpinjun.github.io/main/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://zpinjun.github.io/main/2020/06/09/20200609-parameterizedPR/&title=《Sparse Fourier Phase Retrieval Using Prony’s Method》 — Pinjun Zheng's Page&pic=https://zpinjun.github.io/main/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -353,7 +353,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://zpinjun.github.io/main/2020/06/09/20200609-parameterizedPR/&title=《A Novel Phase Retrieval Algorithm for Parameterized Signal》 — Pinjun Zheng's Page&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://zpinjun.github.io/main/2020/06/09/20200609-parameterizedPR/&title=《Sparse Fourier Phase Retrieval Using Prony’s Method》 — Pinjun Zheng's Page&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -363,7 +363,7 @@
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《A Novel Phase Retrieval Algorithm for Parameterized Signal》 — Pinjun Zheng's Page&url=https://zpinjun.github.io/main/2020/06/09/20200609-parameterizedPR/&via=https://zpinjun.github.io/main" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Sparse Fourier Phase Retrieval Using Prony’s Method》 — Pinjun Zheng's Page&url=https://zpinjun.github.io/main/2020/06/09/20200609-parameterizedPR/&via=https://zpinjun.github.io/main" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
