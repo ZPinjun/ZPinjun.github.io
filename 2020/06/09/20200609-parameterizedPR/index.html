@@ -21,18 +21,21 @@
     
     
     <meta name="keywords" content="Research">
-    <meta name="description" content="IntroductionUsing the notation $[n]_k:&#x3D;\{k,k+1,\dots,k+n-1\}$，specially，$[n]:&#x3D;[n]_0$. And the notation $\widehat{\mathbf{X}_N}$ represents $N$ point DFT of $\mathbf{x}$. In phase Fourier retrieval pro">
+    <meta name="description" content="AbstractThe sparse prior can effectively improve the success probability of phase retrieval reconstruction. However, sparse phase retrieval algorithms such as GESPAR need to search for the support set">
 <meta property="og:type" content="article">
 <meta property="og:title" content="A Novel Phase Retrieval Algorithm for Parameterized Signal">
 <meta property="og:url" content="https://zpinjun.github.io/main/2020/06/09/20200609-parameterizedPR/index.html">
 <meta property="og:site_name" content="Pinjun Zheng&#39;s Page">
-<meta property="og:description" content="IntroductionUsing the notation $[n]_k:&#x3D;\{k,k+1,\dots,k+n-1\}$，specially，$[n]:&#x3D;[n]_0$. And the notation $\widehat{\mathbf{X}_N}$ represents $N$ point DFT of $\mathbf{x}$. In phase Fourier retrieval pro">
+<meta property="og:description" content="AbstractThe sparse prior can effectively improve the success probability of phase retrieval reconstruction. However, sparse phase retrieval algorithms such as GESPAR need to search for the support set">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://zpinjun.github.io/2020/06/09/20200609-parameterizedPR/2020-08-22_102918.png">
+<meta property="og:image" content="https://zpinjun.github.io/2020/06/09/20200609-parameterizedPR/2020-08-22_103015.png">
 <meta property="article:published_time" content="2020-06-09T14:33:21.000Z">
-<meta property="article:modified_time" content="2020-06-09T15:22:48.041Z">
+<meta property="article:modified_time" content="2020-08-22T02:43:15.076Z">
 <meta property="article:author" content="Pinjun Zheng">
 <meta property="article:tag" content="Research">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zpinjun.github.io/2020/06/09/20200609-parameterizedPR/2020-08-22_102918.png">
     
         <link rel="alternate" type="application/atom+xml" title="Pinjun Zheng&#39;s Page" href="/atom.xml">
     
@@ -141,7 +144,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Introduction"><span class="post-toc-number">1.</span> <span class="post-toc-text">Introduction</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Solution"><span class="post-toc-number">2.</span> <span class="post-toc-text">Solution</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Abstract"><span class="post-toc-number">1.</span> <span class="post-toc-text">Abstract</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Introduction"><span class="post-toc-number">2.</span> <span class="post-toc-text">Introduction</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Problem-formulation"><span class="post-toc-number">3.</span> <span class="post-toc-text">Problem formulation</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Main-proposed-theorem"><span class="post-toc-number">4.</span> <span class="post-toc-text">Main proposed theorem</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Simulation-results"><span class="post-toc-number">5.</span> <span class="post-toc-text">Simulation results</span></a></li></ol>
         </nav>
     </aside>
 
@@ -165,11 +168,21 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Using the notation $[n]_k:=\{k,k+1,\dots,k+n-1\}$，specially，$[n]:=[n]_0$. And the notation $\widehat{\mathbf{X}_N}$ represents $N$ point DFT of $\mathbf{x}$.</p>
-<p>In phase Fourier retrieval problem, we consider taht original signal $\mathbf{s}\in\mathbb{C}^M$，and measurement $\mathbf{y}\in\mathbb{R}^N$. The following relationship is satisfied between the two signal:<br>    \begin{equation}<br>        \mathbf{y}[n] = | \widehat{\mathbf{S}_N}[n] |^2, \forall n\in[N].<br>    \end{equation}<br>The goal of the phase retrieval problem is to reconstruct $\mathbf{s}$ from $\mathbf{y}$.</p>
-<p>In this study we assume that the original signal conforms to the form $s(t)=\sum\limits_{k=1}^Kc_kh(t-t_k)$. In discrete form, $\mathbf{s}[m]=\sum\limits_{k=1}^Kc_k\mathbf{h}[m-m_k], \forall m\in [M]$. Because this kind of signal is completely determined by a limited number of parameters, we call it a parameterized signal. Under this assumption, recovering the original signal is equivalent to recovering $2K$ parameters $\{c_1,c_2,\dots,c_K\}$ and $\{m_1,m_2,\dots,m_K\}$. </p>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>At present, we have completed a super-linear convergence iterative algorithm to solve the amplitude parameters.  However, for delay parameters, most of the traditional methods are based on search algorithms.  The disadvantage of this kind of method is that it will generate a huge amount of calculation for large-scale signals, and we next want to focus on avoiding this problem.</p>
+            <h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>The sparse prior can effectively improve the success probability of phase retrieval reconstruction. However, sparse phase retrieval algorithms such as GESPAR need to search for the support set, which leads  to a long time to search for the correct support for large-scale signals. This letter proposes that for sparse Fourier phase retrieval, the support interval can be directly determined by the Prony’s method,  and the possible support sets are determined into a small range through a simple reordering step. The simulation results prove that this is more efficient than the direct support search strategy. To complete phase retrieval, we also use a variant of Chebyshev’s method that proved to have a higher  efficiency index than the damped Gauss-Newton method used in GESPAR algorithm to recover weights.</p>
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Phase retrieval is a widespread inverse problem that focus on recovering a signal given the magnitude of its  Fourier transform. It arises in various fields of science and engineering, including crystallography, radar waveform optimization, asronomy, and optical microscopy. Since the phase retrieval problem is ill-posed and NP-hard, there is no closed-form solution. Research in recent years has shown that sparsity prior can effectively improve the performance of phase retrieval algorithms. Shechtman \textit{et al.} proposed a greedy algorithm called GESPAR for sparse phase retrieval in 2014. The GESPAR algorithm uses a two-stage strategy. It uses the 2-opt method to search for the support set,  and then uses the damped Gauss-Newton method to optimize the amplitude values on each updated support set. he GESPAR algorithm has been successfully applied in many fields, such as X-ray coherent diffraction imaging and  direction of arrival estimation. However, in addition to these encouraging results, the GESPAR algorithm also has an obvious flaw. That is because the support set is determined by search steps, it is impractical for large-scale signals.</p>
+<p>This paper proposes a novel Fourier phase retrieval method with sparse prior. We pointed out that position intervals of the support set can be directly calculated by using Prony’s method, and then the possible support set can be determined into a small range through a simple reordering step.Then, we use a variant of the Cheyshev’s method that have a higher order of convergence than the  damped Gauss-Newton method to recover the amplitude values.</p>
+<h1 id="Problem-formulation"><a href="#Problem-formulation" class="headerlink" title="Problem formulation"></a>Problem formulation</h1><p>Using the notation $[n]_k:=\{k,k+1,\dots,k+n-1\}\subseteq\mathbb{N}$,  $[n] = [n]_0$, and defining $\widehat{\mathbf{x}_N}$ is the $N$-point DFT result of signal $\mathbf{x}$, we consider the phase retrieval problem that recover $\mathbf{x}\in\mathbb{C}^M$ given $\mathbf{y}\in\mathbb{R}^N$, and these two signals satisfy<br>\begin{equation}<br>   \mathbf{y}[n] = |\widehat{\mathbf{x}_N}[n]|^2,   n\in[N],<br>\end{equation} where $M&lt;N$. </p>
+<p>We assume that $\mathbf{x}$ is a sparse signal of the form $\mathbf{x}[m]=\sum_{k=1}^{K}c_k\mathbf{h}[m-m_k], m\in[M]$, where $\mathbf{h}$ is a known basis function. In other words, the sparse bases are composed of a basis and its equally spaced displacements. If K is known beforehand, the original signal $\mathbf{x}$ can be uniquely determined by $2K$ parameters $\{c_i\}_{i=1}^K$ and $\{m_i\}_{i=1}^K$. Note $c_i\in\mathbb{R}$, $m_i\in[M]$, $\forall i\in[K]_1$. In this paper we aim to recover weights $\{c_i\}_{i=1}^K$ and support $\{m_i\}_{i=1}^K$ from the measurement $\mathbf{y}$.</p>
+<h1 id="Main-proposed-theorem"><a href="#Main-proposed-theorem" class="headerlink" title="Main proposed theorem"></a>Main proposed theorem</h1><p>Defining map $\mathcal{B}$: $\{m_i\}_{i=1}^K \mapsto \{\Delta_{kl}|\Delta_{kl}=|m_k-m_l|,\forall k\neq l, k\in[K]_1,l\in[K]_1\}$, we have below Theorem.</p>
+<p><strong>Theorem 1:</strong> <em>Consider a signal $\mathbf{x}\in\mathbb{C}^M$ in form of $\mathbf{x}[m]=\sum_{k=1}^{K}c_k\mathbf{h}[m-m_k], m\in[M]$,     where the function $\mathbf{h}$ is known beforehand. Let set $Q = \mathcal{B}(\{m_i\}_{i=1}^K)$.\footnote{Due to the mutual difference property of sets, equal elements in $Q$ will merge into one element, so the size of $Q$ is less than or equal to $C_K^2$.}    Assume $c_k\neq0,\forall k\in[K]_1$. Then set $Q$ can be uniquely characterized by $\mathbf{y}\in\mathbb{R}^N$ given by $\mathbf{y}[n] = |\widehat{\mathbf{x}_N}|^2$ if $N&gt;2M$.</em></p>
+<h1 id="Simulation-results"><a href="#Simulation-results" class="headerlink" title="Simulation results"></a>Simulation results</h1><div style="width:100%;margin:auto">
+<img src="/2020/06/09/20200609-parameterizedPR/2020-08-22_102918.png" class title="image">
+</div>
 
+<p><br><br><br><br><br></p>
+<div style="width:100%;margin:auto">
+<img src="/2020/06/09/20200609-parameterizedPR/2020-08-22_103015.png" class title="image">
+</div>
         </div>
 
         <blockquote class="post-copyright">
