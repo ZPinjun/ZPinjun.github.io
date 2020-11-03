@@ -1,2 +1,2 @@
 # ZPinjun.github.io
-This is a blog project.
+This is my academic page.
