@@ -3,11 +3,113 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://zpinjun.github.io/</loc>
+    <loc>https://zpinjun.github.io/publication-type/2/</loc>
+    <lastmod>2020-10-22T00:00:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://zpinjun.github.io/authors/</loc>
+    <lastmod>2020-10-22T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zpinjun.github.io/author/liyan-qiao/</loc>
+    <lastmod>2020-10-22T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zpinjun.github.io/author/ning-fu/</loc>
+    <lastmod>2020-10-22T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zpinjun.github.io/author/pinjun-zheng/</loc>
+    <lastmod>2020-10-22T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zpinjun.github.io/</loc>
+    <lastmod>2020-10-22T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zpinjun.github.io/publication_types/</loc>
+    <lastmod>2020-10-22T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zpinjun.github.io/publication/</loc>
+    <lastmod>2020-10-22T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zpinjun.github.io/publication/journal-papers/tim2020.10.22_weighted-phase-retrieval-of-fourier-measurement-with-outliers-measurement-structure-and-reconstruction-algorithm/</loc>
+    <lastmod>2020-10-22T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zpinjun.github.io/author/xiaodong-li/</loc>
+    <lastmod>2020-10-22T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zpinjun.github.io/publication-type/3/</loc>
+    <lastmod>2020-10-21T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zpinjun.github.io/publication/conference-papers/icassp2020.10.21_a-super-resolution-phase-retrieval-method-for-sparse-signals-with-arbitrary-scattering-function/</loc>
+    <lastmod>2020-10-21T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zpinjun.github.io/publication-type/1/</loc>
+    <lastmod>2019-12-21T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zpinjun.github.io/publication/conference-papers/i2mtc2019.12.21_a-measurement-fault-elimination-method-in-one-dimensional-fourier-phase-retrieval-%E5%89%AF%E6%9C%AC/</loc>
+    <lastmod>2019-12-21T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zpinjun.github.io/author/ying-liu/</loc>
+    <lastmod>2019-12-21T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zpinjun.github.io/project/2019.04_ac-multi-channel-parallel-acquisition-and-processing-circuit-based-on-zynq/</loc>
+    <lastmod>2019-02-20T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zpinjun.github.io/project/2019.07_tetris-game-based-on-fpga-and-vga-protocol/</loc>
+    <lastmod>2019-02-20T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zpinjun.github.io/tag/digital-circuit-design/</loc>
+    <lastmod>2019-02-20T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zpinjun.github.io/tag/fpga/</loc>
+    <lastmod>2019-02-20T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zpinjun.github.io/project/</loc>
+    <lastmod>2019-02-20T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zpinjun.github.io/tags/</loc>
+    <lastmod>2019-02-20T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zpinjun.github.io/tag/zynq/</loc>
+    <lastmod>2019-02-20T00:00:00+08:00</lastmod>
   </url>
   
   <url>
@@ -23,19 +125,7 @@
   </url>
   
   <url>
-    <loc>https://zpinjun.github.io/publication_types/</loc>
-  </url>
-  
-  <url>
-    <loc>https://zpinjun.github.io/publication/</loc>
-  </url>
-  
-  <url>
     <loc>https://zpinjun.github.io/talk/</loc>
-  </url>
-  
-  <url>
-    <loc>https://zpinjun.github.io/tags/</loc>
   </url>
   
 </urlset>

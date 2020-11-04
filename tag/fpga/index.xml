@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FPGA | Pinjun&#39;s page</title>
+    <link>https://zpinjun.github.io/tag/fpga/</link>
+      <atom:link href="https://zpinjun.github.io/tag/fpga/index.xml" rel="self" type="application/rss+xml" />
+    <description>FPGA</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 20 Feb 2019 00:00:00 +0800</lastBuildDate>
+    <image>
+      <url>https://zpinjun.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>FPGA</title>
+      <link>https://zpinjun.github.io/tag/fpga/</link>
+    </image>
+    
+    <item>
+      <title>AC Multi-Channel Parallel Acquisition and Processing Circuit based on ZYNQ</title>
+      <link>https://zpinjun.github.io/project/2019.04_ac-multi-channel-parallel-acquisition-and-processing-circuit-based-on-zynq/</link>
+      <pubDate>Wed, 20 Feb 2019 00:00:00 +0800</pubDate>
+      <guid>https://zpinjun.github.io/project/2019.04_ac-multi-channel-parallel-acquisition-and-processing-circuit-based-on-zynq/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Designed and developed a small and easy to carry testing electronic system for electrical load of civil aviation aircraft.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Designed an embedded circuit board based on ZYNQ to collect and calculate the effective value of multi-channel AC, and to transmit the calculation results to the upper computer which could reduced the calculation load of the upper computer.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Achieved &amp;gt;100 ksps sampling rate of the single channel and the effective value acquisition error &amp;lt;0.5%, and could provide up to 64 AC parallel acquisition.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following are some of the results (in Chinese):
+&lt;img src=&#34;fig1.png&#34; alt=&#34;fig1&#34;&gt;
+&lt;img src=&#34;fig2.png&#34; alt=&#34;fig1&#34;&gt;
+&lt;img src=&#34;fig3.png&#34; alt=&#34;fig1&#34;&gt;
+&lt;img src=&#34;fig4.png&#34; alt=&#34;fig1&#34;&gt;
+&lt;img src=&#34;fig5.png&#34; alt=&#34;fig1&#34;&gt;
+&lt;img src=&#34;fig6.png&#34; alt=&#34;fig1&#34;&gt;
+&lt;img src=&#34;fig7.png&#34; alt=&#34;fig1&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AC Multi-Channel Parallel Acquisition and Processing Circuit based on ZYNQ</title>
+      <link>https://zpinjun.github.io/project/2019.07_tetris-game-based-on-fpga-and-vga-protocol/</link>
+      <pubDate>Wed, 20 Feb 2019 00:00:00 +0800</pubDate>
+      <guid>https://zpinjun.github.io/project/2019.07_tetris-game-based-on-fpga-and-vga-protocol/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Designed and developed a small and easy to carry testing electronic system for electrical load of civil aviation aircraft.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Designed an embedded circuit board based on ZYNQ to collect and calculate the effective value of multi-channel AC, and to transmit the calculation results to the upper computer which could reduced the calculation load of the upper computer.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Achieved &amp;gt;100 ksps sampling rate of the single channel and the effective value acquisition error &amp;lt;0.5%, and could provide up to 64 AC parallel acquisition.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following are some of the results (in Chinese):
+&lt;img src=&#34;fig1.png&#34; alt=&#34;fig1&#34;&gt;
+&lt;img src=&#34;fig2.png&#34; alt=&#34;fig1&#34;&gt;
+&lt;img src=&#34;fig3.png&#34; alt=&#34;fig1&#34;&gt;
+&lt;img src=&#34;fig4.png&#34; alt=&#34;fig1&#34;&gt;
+&lt;img src=&#34;fig5.png&#34; alt=&#34;fig1&#34;&gt;
+&lt;img src=&#34;fig6.png&#34; alt=&#34;fig1&#34;&gt;
+&lt;img src=&#34;fig7.png&#34; alt=&#34;fig1&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

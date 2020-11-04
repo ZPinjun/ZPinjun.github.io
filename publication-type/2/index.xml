@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2 | Pinjun&#39;s page</title>
+    <link>https://zpinjun.github.io/publication-type/2/</link>
+      <atom:link href="https://zpinjun.github.io/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
+    <description>2</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 22 Oct 2020 00:00:00 +0800</lastBuildDate>
+    <image>
+      <url>https://zpinjun.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>2</title>
+      <link>https://zpinjun.github.io/publication-type/2/</link>
+    </image>
+    
+    <item>
+      <title>Weighted Phase Retrieval of Fourier Measurement with Outliers Measurement Structure and Reconstruction Algorithm</title>
+      <link>https://zpinjun.github.io/publication/journal-papers/tim2020.10.22_weighted-phase-retrieval-of-fourier-measurement-with-outliers-measurement-structure-and-reconstruction-algorithm/</link>
+      <pubDate>Thu, 22 Oct 2020 00:00:00 +0800</pubDate>
+      <guid>https://zpinjun.github.io/publication/journal-papers/tim2020.10.22_weighted-phase-retrieval-of-fourier-measurement-with-outliers-measurement-structure-and-reconstruction-algorithm/</guid>
+      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

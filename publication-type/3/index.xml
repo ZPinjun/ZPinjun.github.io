@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3 | Pinjun&#39;s page</title>
+    <link>https://zpinjun.github.io/publication-type/3/</link>
+      <atom:link href="https://zpinjun.github.io/publication-type/3/index.xml" rel="self" type="application/rss+xml" />
+    <description>3</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 21 Oct 2020 00:00:00 +0800</lastBuildDate>
+    <image>
+      <url>https://zpinjun.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>3</title>
+      <link>https://zpinjun.github.io/publication-type/3/</link>
+    </image>
+    
+    <item>
+      <title>A Super Resolution Phase Retrieval Method for Sparse Signals with Arbitrary Scattering Function</title>
+      <link>https://zpinjun.github.io/publication/conference-papers/icassp2020.10.21_a-super-resolution-phase-retrieval-method-for-sparse-signals-with-arbitrary-scattering-function/</link>
+      <pubDate>Wed, 21 Oct 2020 00:00:00 +0800</pubDate>
+      <guid>https://zpinjun.github.io/publication/conference-papers/icassp2020.10.21_a-super-resolution-phase-retrieval-method-for-sparse-signals-with-arbitrary-scattering-function/</guid>
+      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
