@@ -78,11 +78,6 @@
   </url>
   
   <url>
-    <loc>https://zpinjun.github.io/tag/digital-circuit-design/</loc>
-    <lastmod>2019-07-20T00:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zpinjun.github.io/project/2019.07_tetris-game-based-on-fpga-and-vga-protocol/</loc>
     <lastmod>2019-07-20T00:00:00+08:00</lastmod>
   </url>
@@ -103,12 +98,22 @@
   </url>
   
   <url>
-    <loc>https://zpinjun.github.io/tag/zynq/</loc>
+    <loc>https://zpinjun.github.io/tag/vga-protocol/</loc>
     <lastmod>2019-07-20T00:00:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://zpinjun.github.io/project/2019.06_ac-multi-channel-parallel-acquisition-and-processing-circuit-based-on-zynq/</loc>
+    <lastmod>2019-06-20T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zpinjun.github.io/tag/digital-circuit-design/</loc>
+    <lastmod>2019-06-20T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zpinjun.github.io/tag/zynq/</loc>
     <lastmod>2019-06-20T00:00:00+08:00</lastmod>
   </url>
   

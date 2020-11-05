@@ -5,37 +5,12 @@
     <link>https://zpinjun.github.io/tag/digital-circuit-design/</link>
       <atom:link href="https://zpinjun.github.io/tag/digital-circuit-design/index.xml" rel="self" type="application/rss+xml" />
     <description>Digital circuit design</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 20 Jul 2019 00:00:00 +0800</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 20 Jun 2019 00:00:00 +0800</lastBuildDate>
     <image>
       <url>https://zpinjun.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Digital circuit design</title>
       <link>https://zpinjun.github.io/tag/digital-circuit-design/</link>
     </image>
-    
-    <item>
-      <title>Embedded Tetris game based on FPGA and VGA protocol</title>
-      <link>https://zpinjun.github.io/project/2019.07_tetris-game-based-on-fpga-and-vga-protocol/</link>
-      <pubDate>Sat, 20 Jul 2019 00:00:00 +0800</pubDate>
-      <guid>https://zpinjun.github.io/project/2019.07_tetris-game-based-on-fpga-and-vga-protocol/</guid>
-      <description>&lt;h1 id=&#34;summer-project-of-measurement-and-control&#34;&gt;Summer Project of Measurement and Control&lt;/h1&gt;
-&lt;p&gt;We took part in 2019 summer project of measurement and control in Weihai, China. See details about &lt;a href=&#34;http://tce.hit.edu.cn/news/1488&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Admission Notice&lt;/a&gt; 、&lt;a href=&#34;https://www.hitwh.edu.cn/2019/0715/c1307a110158/page.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;News&lt;/a&gt; and &lt;a href=&#34;https://a.eqxiu.com/s/CEA14EuC?eqrcode=1&amp;amp;share_level=5&amp;amp;from_user=202004275378cf24&amp;amp;from_id=8f96cfe4-c&amp;amp;share_time=1587953016799&amp;amp;from=timeline&amp;amp;isappinstalled=0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Brochure&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;This year&amp;rsquo;s summer project is held in Weihai, from July 14th to July 26th.  I submitted the registration form on June 25 and received the admission notice on July 4.&lt;/p&gt;
-&lt;h1 id=&#34;project&#34;&gt;Project&lt;/h1&gt;
-&lt;p&gt;We need to form a team of 3 to 4 people to develop a complete work in a week.  Fortunately, my good friends H. Yan and Z. Piao were at the time, so we successfully formed an efficient team.&lt;/p&gt;
-&lt;p&gt;The title of the project we selected is &amp;ldquo;Embedded Tetris game based on FPGA and VGA protocol&amp;rdquo;. We use a Xilinx development board provided by the organizer, using VIVADO software and Verilog language for development. Unlike other software programming, we use FPGA to develop game logic, use five buttons on the development board as input to control the movement and rotation of Tetris, and the output is connected to the display using a VGA bus.  We use the VGA protocol to control the output logic to make the display screen display what we want to display. Our project references &lt;a href=&#34;https://github.com/rfotino/verilog-tetris&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt; open source project. On the basis of the existing we have added several new functions:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Display the next Tetris in the upper left corner of the interface.&lt;/li&gt;
-&lt;li&gt;Display the current score in the upper right corner of the interface (the original project is to display the score on the development board with a digital tube).&lt;/li&gt;
-&lt;li&gt;The opening image is displayed at the beginning of the game, and the ending image is displayed at the end of the game.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Our project can be found on my &lt;a href=&#34;https://github.com/ZPinjun/Tetris-base-on-FPGA-VGA&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github&lt;/a&gt; and &lt;a href=&#34;https://download.csdn.net/download/qq_39065549/12168594&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CSDN&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The difficulty of the work we do is the display of images.  Because VGA controls the three RGB color channels in the form of dot matrix scanning, it is relatively easy to implement regular geometric figures such as squares.  To display the image in hardware language, we must first store the digital image information in RAM, and then send it to the VGA bus according to the mapping relationship during display.  In order to achieve this, we first use the drawing tool to design the image we want to display, and then use Matlab to read the information of the digital image, convert the information of each pixel into a binary number, and then follow a certain order (three channels separate,  The sequence is R&amp;gt;G&amp;gt;B. Each channel is scanned line by line, from top to bottom.). Write it to the .txt file according to the format of the .coe file, and finally change the suffix to .coe to obtain the storage information recognized by VIVADO. Then integrate the module into the project. Before the game starts, first output the image information in the .coe file to the VGA. Note that it must be output strictly in the order set before.&lt;/p&gt;
-&lt;p&gt;Fortunately, our work was finally rated as an excellent work. The following is a display taken at the time:
-(Because github page does not allow loading in iframe, please see this video on: &lt;a href=&#34;https://youtu.be/lcI1L9hnv10&#34;&gt;https://youtu.be/lcI1L9hnv10&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;fig1.png&#34; alt=&#34;fig&#34;&gt;
-&lt;img src=&#34;fig2.jpg&#34; alt=&#34;fig&#34;&gt;&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>AC Multi-Channel Parallel Acquisition and Processing Circuit based on ZYNQ</title>
