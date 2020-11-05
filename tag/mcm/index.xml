@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MCM | Pinjun&#39;s page</title>
+    <link>https://zpinjun.github.io/tag/mcm/</link>
+      <atom:link href="https://zpinjun.github.io/tag/mcm/index.xml" rel="self" type="application/rss+xml" />
+    <description>MCM</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 20 Apr 2019 00:00:00 +0800</lastBuildDate>
+    <image>
+      <url>https://zpinjun.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>MCM</title>
+      <link>https://zpinjun.github.io/tag/mcm/</link>
+    </image>
+    
+    <item>
+      <title>Meritorious Winner in Mathematical Contest in Modeling (MCM)</title>
+      <link>https://zpinjun.github.io/project/2019.04_meritorious-winner-in-mathematical-contest-in-modeling-mcm/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0800</pubDate>
+      <guid>https://zpinjun.github.io/project/2019.04_meritorious-winner-in-mathematical-contest-in-modeling-mcm/</guid>
+      <description>&lt;p&gt;The Mathematical Contest in Modeling (MCM) is an international contest sponsored by COMAP (the Consortium for Mathematics and Its Application). It challenges teams of students to clarify, analyze, and propose solutions to open-ended problems. The contest attracts diverse students and faculty advisors from over 900 institutions around the world. Here is the &lt;a href=&#34;https://www.comap.com/undergraduate/contests/index.html&#34; target=&#34;_blank&#34;&gt;&lt;font color=#FF0000&gt; homepage&lt;/font&gt;&lt;/a&gt; of MCM.&lt;/p&gt;
+&lt;p&gt;My friends T. Chen, Y. Li and I participated in the 2019 MCM, and we won the Meritorious Winner. The time spent working hard with trusted partners is unforgettable. We have recorded and summarized this wonderful experience on this&lt;a href=&#34;https://upupming.site/2019/01/29/2019-mcm-summary/#前期准备&#34; target=&#34;_blank&#34;&gt;&lt;font color=#FF0000&gt; page&lt;/font&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here is the problem we chose:&lt;/p&gt;
+&lt;p&gt;{% pdf ./2019_MCM_Problem_A.pdf %}&lt;/p&gt;
+&lt;p&gt;Here is our solution paper at the time:&lt;/p&gt;
+&lt;p&gt;{% pdf ./MCM_solution_paper.pdf %}&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

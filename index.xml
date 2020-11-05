@@ -37,56 +37,115 @@
     </item>
     
     <item>
-      <title>AC Multi-Channel Parallel Acquisition and Processing Circuit based on ZYNQ</title>
-      <link>https://zpinjun.github.io/project/2019.04_ac-multi-channel-parallel-acquisition-and-processing-circuit-based-on-zynq/</link>
-      <pubDate>Wed, 20 Feb 2019 00:00:00 +0800</pubDate>
-      <guid>https://zpinjun.github.io/project/2019.04_ac-multi-channel-parallel-acquisition-and-processing-circuit-based-on-zynq/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Designed and developed a small and easy to carry testing electronic system for electrical load of civil aviation aircraft.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Designed an embedded circuit board based on ZYNQ to collect and calculate the effective value of multi-channel AC, and to transmit the calculation results to the upper computer which could reduced the calculation load of the upper computer.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Achieved &amp;gt;100 ksps sampling rate of the single channel and the effective value acquisition error &amp;lt;0.5%, and could provide up to 64 AC parallel acquisition.&lt;/p&gt;
-&lt;/li&gt;
+      <title>Embedded Tetris game based on FPGA and VGA protocol</title>
+      <link>https://zpinjun.github.io/project/2019.07_tetris-game-based-on-fpga-and-vga-protocol/</link>
+      <pubDate>Sat, 20 Jul 2019 00:00:00 +0800</pubDate>
+      <guid>https://zpinjun.github.io/project/2019.07_tetris-game-based-on-fpga-and-vga-protocol/</guid>
+      <description>&lt;h1 id=&#34;summer-project-of-measurement-and-control&#34;&gt;Summer Project of Measurement and Control&lt;/h1&gt;
+&lt;p&gt;We took part in 2019 summer project of measurement and control in Weihai, China. See details about &lt;a href=&#34;http://tce.hit.edu.cn/news/1488&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Admission Notice&lt;/a&gt; 、&lt;a href=&#34;https://www.hitwh.edu.cn/2019/0715/c1307a110158/page.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;News&lt;/a&gt; and &lt;a href=&#34;https://a.eqxiu.com/s/CEA14EuC?eqrcode=1&amp;amp;share_level=5&amp;amp;from_user=202004275378cf24&amp;amp;from_id=8f96cfe4-c&amp;amp;share_time=1587953016799&amp;amp;from=timeline&amp;amp;isappinstalled=0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Brochure&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;This year&amp;rsquo;s summer project is held in Weihai, from July 14th to July 26th.  I submitted the registration form on June 25 and received the admission notice on July 4.&lt;/p&gt;
+&lt;h1 id=&#34;project&#34;&gt;Project&lt;/h1&gt;
+&lt;p&gt;We need to form a team of 3 to 4 people to develop a complete work in a week.  Fortunately, my good friends H. Yan and Z. Piao were at the time, so we successfully formed an efficient team.&lt;/p&gt;
+&lt;p&gt;The title of the project we selected is &amp;ldquo;Embedded Tetris game based on FPGA and VGA protocol&amp;rdquo;. We use a Xilinx development board provided by the organizer, using VIVADO software and Verilog language for development. Unlike other software programming, we use FPGA to develop game logic, use five buttons on the development board as input to control the movement and rotation of Tetris, and the output is connected to the display using a VGA bus.  We use the VGA protocol to control the output logic to make the display screen display what we want to display. Our project references &lt;a href=&#34;https://github.com/rfotino/verilog-tetris&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt; open source project. On the basis of the existing we have added several new functions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Display the next Tetris in the upper left corner of the interface.&lt;/li&gt;
+&lt;li&gt;Display the current score in the upper right corner of the interface (the original project is to display the score on the development board with a digital tube).&lt;/li&gt;
+&lt;li&gt;The opening image is displayed at the beginning of the game, and the ending image is displayed at the end of the game.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The following are some of the results (in Chinese):
-&lt;img src=&#34;fig1.png&#34; alt=&#34;fig1&#34;&gt;
+&lt;p&gt;Our project can be found on my &lt;a href=&#34;https://github.com/ZPinjun/Tetris-base-on-FPGA-VGA&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github&lt;/a&gt; and &lt;a href=&#34;https://download.csdn.net/download/qq_39065549/12168594&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CSDN&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The difficulty of the work we do is the display of images.  Because VGA controls the three RGB color channels in the form of dot matrix scanning, it is relatively easy to implement regular geometric figures such as squares.  To display the image in hardware language, we must first store the digital image information in RAM, and then send it to the VGA bus according to the mapping relationship during display.  In order to achieve this, we first use the drawing tool to design the image we want to display, and then use Matlab to read the information of the digital image, convert the information of each pixel into a binary number, and then follow a certain order (three channels separate,  The sequence is R&amp;gt;G&amp;gt;B. Each channel is scanned line by line, from top to bottom.). Write it to the .txt file according to the format of the .coe file, and finally change the suffix to .coe to obtain the storage information recognized by VIVADO. Then integrate the module into the project. Before the game starts, first output the image information in the .coe file to the VGA. Note that it must be output strictly in the order set before.&lt;/p&gt;
+&lt;p&gt;Fortunately, our work was finally rated as an excellent work. The following is a display taken at the time:
+(Because github page does not allow loading in iframe, please see this video on: &lt;a href=&#34;https://youtu.be/lcI1L9hnv10&#34;&gt;https://youtu.be/lcI1L9hnv10&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fig1.png&#34; alt=&#34;fig&#34;&gt;
+&lt;img src=&#34;fig2.jpg&#34; alt=&#34;fig&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AC Multi-Channel Parallel Acquisition and Processing Circuit based on ZYNQ</title>
+      <link>https://zpinjun.github.io/project/2019.06_ac-multi-channel-parallel-acquisition-and-processing-circuit-based-on-zynq/</link>
+      <pubDate>Thu, 20 Jun 2019 00:00:00 +0800</pubDate>
+      <guid>https://zpinjun.github.io/project/2019.06_ac-multi-channel-parallel-acquisition-and-processing-circuit-based-on-zynq/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Among the various electrical parameters of airborne AC, the voltage effective value (rms value) of steady-state AC voltage is an extremely important parameter. There are strict international standards for measuring the effective value of airborne AC. Our project is carried out with reference to the ISO 12384 standard. The main features of airborne AC voltage acquisition task are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Multiple acquisition channels&lt;/li&gt;
+&lt;li&gt;High sampling frequency requirements&lt;/li&gt;
+&lt;li&gt;strict synchronization requirements&lt;/li&gt;
+&lt;li&gt;Equipment miniaturization requirements&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Considering that the complete test system also needs to measure other parameters, which will result in a large computing power load, we want to develop a lower computer circuit to undertake the multi-channel airborne AC rms measurement task to reduce the burden on the upper computer.&lt;/p&gt;
+&lt;h1 id=&#34;technical-requirements&#34;&gt;Technical Requirements&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Equipment area is not less than 200 mm × 180 mm, height is not more than 100 mm.&lt;/li&gt;
+&lt;li&gt;The sampling rate of the single voltage acquisition channel is not less than 100 ksps, and the sampling time is not more than 1s. The data bit width is not less than 14 bits.&lt;/li&gt;
+&lt;li&gt;The voltage rms error does not exceed 0.5%.&lt;/li&gt;
+&lt;li&gt;The number of acquisition channels is not less than 64, and the data of all the channels need to be acquired synchronously.&lt;/li&gt;
+&lt;li&gt;The processed data is output using the standard RS 422 interface.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;overall-design&#34;&gt;Overall Design&lt;/h1&gt;
+&lt;h3 id=&#34;hardware-design&#34;&gt;Hardware Design&lt;/h3&gt;
+&lt;p&gt;The circuit hardware is mainly divided into the following four modules:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Multi-channel data acquisition module&lt;/li&gt;
+&lt;li&gt;ZYNQ core board main control module&lt;/li&gt;
+&lt;li&gt;Data export module&lt;/li&gt;
+&lt;li&gt;Power supply module&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;software-design&#34;&gt;Software Design&lt;/h3&gt;
+&lt;p&gt;The ZYNQ chip used in this project is a all programmable SoC, which equipped with dual-core ARM Cortex-A9 processors (PS) and Kintex®-7 based programmable logic (PL). We use Verilog language to program PL part to control multiple AD chips to complete the parallel acquisition and data stream transmission task of instantaneous voltage. Use the C language to develop the PS part to complete the calculation of the effective value. The logic of the PL part is packaged into an IP core through the VIVADO software, and the ARM program controls the work of these IPs by reading and writing custom registers. The following figure shows the logical state machine of two IP cores:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;fig3.png&#34; alt=&#34;fig1&#34;&gt;
+&lt;img src=&#34;fig4.png&#34; alt=&#34;fig1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The overall operation process of the software is shown in the following figure:
+&lt;img src=&#34;fig5.png&#34; alt=&#34;fig1&#34;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The ARM processor sends a PS_en rising edge trigger to the data master IP.&lt;/li&gt;
+&lt;li&gt;The data master IP works, data is sampled and sent into the FIFO, which loop 1000 times.&lt;/li&gt;
+&lt;li&gt;The data master IP sends PS_acquiDataOver to the ARM processor.&lt;/li&gt;
+&lt;li&gt;The ARM processor starts the DMA transfer channel.&lt;/li&gt;
+&lt;li&gt;The DMA controller transfers the data in the FIFO to the DDR memory.&lt;/li&gt;
+&lt;li&gt;The DMA controller sends a signal to the ARM processor that the transfer is complete.&lt;/li&gt;
+&lt;li&gt;The ARM processor reads data from the DDR memory.&lt;/li&gt;
+&lt;li&gt;The ARM processor performs effective value calculation and exports the result to IP through RS422.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;product--test&#34;&gt;Product &amp;amp; Test&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Single channel sampling rate is 167.79 ksps.&lt;/li&gt;
+&lt;li&gt;The average time for any channel of the board to complete a data acquisition and calculation process is about 6.590 ms.&lt;/li&gt;
+&lt;li&gt;The effective value acquisition error does not exceed 0.4%.&lt;/li&gt;
+&lt;li&gt;The power consumption of the whole board is about 7.98 W.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;fig1.png&#34; alt=&#34;fig1&#34;&gt;
 &lt;img src=&#34;fig2.png&#34; alt=&#34;fig1&#34;&gt;
-&lt;img src=&#34;fig3.png&#34; alt=&#34;fig1&#34;&gt;
-&lt;img src=&#34;fig4.png&#34; alt=&#34;fig1&#34;&gt;
-&lt;img src=&#34;fig5.png&#34; alt=&#34;fig1&#34;&gt;
 &lt;img src=&#34;fig6.png&#34; alt=&#34;fig1&#34;&gt;
 &lt;img src=&#34;fig7.png&#34; alt=&#34;fig1&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>AC Multi-Channel Parallel Acquisition and Processing Circuit based on ZYNQ</title>
-      <link>https://zpinjun.github.io/project/2019.07_tetris-game-based-on-fpga-and-vga-protocol/</link>
-      <pubDate>Wed, 20 Feb 2019 00:00:00 +0800</pubDate>
-      <guid>https://zpinjun.github.io/project/2019.07_tetris-game-based-on-fpga-and-vga-protocol/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Designed and developed a small and easy to carry testing electronic system for electrical load of civil aviation aircraft.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Designed an embedded circuit board based on ZYNQ to collect and calculate the effective value of multi-channel AC, and to transmit the calculation results to the upper computer which could reduced the calculation load of the upper computer.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Achieved &amp;gt;100 ksps sampling rate of the single channel and the effective value acquisition error &amp;lt;0.5%, and could provide up to 64 AC parallel acquisition.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The following are some of the results (in Chinese):
-&lt;img src=&#34;fig1.png&#34; alt=&#34;fig1&#34;&gt;
-&lt;img src=&#34;fig2.png&#34; alt=&#34;fig1&#34;&gt;
-&lt;img src=&#34;fig3.png&#34; alt=&#34;fig1&#34;&gt;
-&lt;img src=&#34;fig4.png&#34; alt=&#34;fig1&#34;&gt;
-&lt;img src=&#34;fig5.png&#34; alt=&#34;fig1&#34;&gt;
-&lt;img src=&#34;fig6.png&#34; alt=&#34;fig1&#34;&gt;
-&lt;img src=&#34;fig7.png&#34; alt=&#34;fig1&#34;&gt;&lt;/p&gt;
+      <title>Meritorious Winner in Mathematical Contest in Modeling (MCM)</title>
+      <link>https://zpinjun.github.io/project/2019.04_meritorious-winner-in-mathematical-contest-in-modeling-mcm/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0800</pubDate>
+      <guid>https://zpinjun.github.io/project/2019.04_meritorious-winner-in-mathematical-contest-in-modeling-mcm/</guid>
+      <description>&lt;p&gt;The Mathematical Contest in Modeling (MCM) is an international contest sponsored by COMAP (the Consortium for Mathematics and Its Application). It challenges teams of students to clarify, analyze, and propose solutions to open-ended problems. The contest attracts diverse students and faculty advisors from over 900 institutions around the world. Here is the &lt;a href=&#34;https://www.comap.com/undergraduate/contests/index.html&#34; target=&#34;_blank&#34;&gt;&lt;font color=#FF0000&gt; homepage&lt;/font&gt;&lt;/a&gt; of MCM.&lt;/p&gt;
+&lt;p&gt;My friends T. Chen, Y. Li and I participated in the 2019 MCM, and we won the Meritorious Winner. The time spent working hard with trusted partners is unforgettable. We have recorded and summarized this wonderful experience on this&lt;a href=&#34;https://upupming.site/2019/01/29/2019-mcm-summary/#前期准备&#34; target=&#34;_blank&#34;&gt;&lt;font color=#FF0000&gt; page&lt;/font&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here is the problem we chose:&lt;/p&gt;
+&lt;p&gt;{% pdf ./2019_MCM_Problem_A.pdf %}&lt;/p&gt;
+&lt;p&gt;Here is our solution paper at the time:&lt;/p&gt;
+&lt;p&gt;{% pdf ./MCM_solution_paper.pdf %}&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The national second prize in China Undergraduate Mathematical Contest in Modeling (CUMCM)</title>
+      <link>https://zpinjun.github.io/project/2018.11_the-national-second-prize-in-china-undergraduate-mathematical-contest-in-modeling-cumcm/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0800</pubDate>
+      <guid>https://zpinjun.github.io/project/2018.11_the-national-second-prize-in-china-undergraduate-mathematical-contest-in-modeling-cumcm/</guid>
+      <description>&lt;p&gt;China Undergraduate Mathematical Contest in Modeling (CUMCM) is the largest mathematical modeling contest in the world. It is sponsored by China Society for Industrial and applied Mathematics. Here is the &lt;a href=&#34;http://www.mcm.edu.cn/index_cn.html&#34; target=&#34;_blank&#34;&gt;&lt;font color=#FF0000&gt; homepage&lt;/font&gt;&lt;/a&gt; of CUMCM.&lt;/p&gt;
+&lt;p&gt;My friends T. Chen, H. Liu and I participated in the 2018 CUMCM, and we won the second prize. This contest is in Chinese, and below are the problem we chose and final solution paper we submitted.&lt;/p&gt;
+&lt;p&gt;{% pdf ./CUMCM-2018-Problem-A-Chinese.pdf %}&lt;/p&gt;
+&lt;p&gt;{% pdf ./A201808007169_陈叹辞_郑品军_刘浩鹏.pdf %}&lt;/p&gt;
 </description>
     </item>
     

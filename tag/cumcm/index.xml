@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CUMCM | Pinjun&#39;s page</title>
+    <link>https://zpinjun.github.io/tag/cumcm/</link>
+      <atom:link href="https://zpinjun.github.io/tag/cumcm/index.xml" rel="self" type="application/rss+xml" />
+    <description>CUMCM</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 20 Nov 2018 00:00:00 +0800</lastBuildDate>
+    <image>
+      <url>https://zpinjun.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>CUMCM</title>
+      <link>https://zpinjun.github.io/tag/cumcm/</link>
+    </image>
+    
+    <item>
+      <title>The national second prize in China Undergraduate Mathematical Contest in Modeling (CUMCM)</title>
+      <link>https://zpinjun.github.io/project/2018.11_the-national-second-prize-in-china-undergraduate-mathematical-contest-in-modeling-cumcm/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0800</pubDate>
+      <guid>https://zpinjun.github.io/project/2018.11_the-national-second-prize-in-china-undergraduate-mathematical-contest-in-modeling-cumcm/</guid>
+      <description>&lt;p&gt;China Undergraduate Mathematical Contest in Modeling (CUMCM) is the largest mathematical modeling contest in the world. It is sponsored by China Society for Industrial and applied Mathematics. Here is the &lt;a href=&#34;http://www.mcm.edu.cn/index_cn.html&#34; target=&#34;_blank&#34;&gt;&lt;font color=#FF0000&gt; homepage&lt;/font&gt;&lt;/a&gt; of CUMCM.&lt;/p&gt;
+&lt;p&gt;My friends T. Chen, H. Liu and I participated in the 2018 CUMCM, and we won the second prize. This contest is in Chinese, and below are the problem we chose and final solution paper we submitted.&lt;/p&gt;
+&lt;p&gt;{% pdf ./CUMCM-2018-Problem-A-Chinese.pdf %}&lt;/p&gt;
+&lt;p&gt;{% pdf ./A201808007169_陈叹辞_郑品军_刘浩鹏.pdf %}&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
